@@ -23,12 +23,29 @@
     <link rel="stylesheet" href="../css/bootstrap-datepicker.css">
     <link rel="stylesheet" href="../css/jquery.timepicker.css">
 
-    
     <link rel="stylesheet" href="../css/flaticon.css">
     <link rel="stylesheet" href="../css/icomoon.css">
     <link rel="stylesheet" href="../css/style.css">
   </head>
   <body>
+  <?php
+      require('../db/db.php');
+      if (isset($_REQUEST['username'])){
+        $username = stripslashes($_REQUEST['username']); // enlever backslashes
+        $username = mysqli_real_escape_string($con,$username); //escapes special characters in a string
+        $email = stripslashes($_REQUEST['email']);
+        $email = mysqli_real_escape_string($con,$email);
+        $password = stripslashes($_REQUEST['password']);
+        $password = mysqli_real_escape_string($con,$password);
+    
+        $trn_date = date("Y-m-d H:i:s");
+            $query = "INSERT into `users` (username, password, email, trn_date) VALUES ('$username', '".md5($password)."', '$email', '$trn_date')";
+            $result = mysqli_query($con,$query);
+            if($result){
+                echo "<div class='form'><h3>Vous êtes enregistré avec succès.</h3><br/>Cliquez ici pour vous connecter <a href='connexion.php'>Se connecter</a></div>";
+            }
+        }else{
+    ?>
     
   <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
@@ -62,40 +79,15 @@
 	  </nav>
     <!-- END nav -->
     
-    <section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('../images/accueil/homeImage.jpg');" data-stellar-background-ratio="0.5">
+    <section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('../images/accueil/site_CAP.jpg');" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-start">
           <div class="col-md-9 ftco-animate pb-5">
-            <h1 class="mb-3 bread">Inscription</h1>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <?php
-      require('../db/db.php');
-      if (isset($_REQUEST['username'])){
-        $username = stripslashes($_REQUEST['username']); // enlever backslashes
-        $username = mysqli_real_escape_string($con,$username); //escapes special characters in a string
-        $email = stripslashes($_REQUEST['email']);
-        $email = mysqli_real_escape_string($con,$email);
-        $password = stripslashes($_REQUEST['password']);
-        $password = mysqli_real_escape_string($con,$password);
-    
-        $trn_date = date("Y-m-d H:i:s");
-            $query = "INSERT into `users` (username, password, email, trn_date) VALUES ('$username', '".md5($password)."', '$email', '$trn_date')";
-            $result = mysqli_query($con,$query);
-            if($result){
-                echo "<div class='form'><h3>Vous êtes enregistré avec succès.</h3><br/>Cliquez ici pour vous connecter <a href='connexion.php'>Se connecter</a></div>";
-            }
-        }else{
-    ?>
-    <section class="ftco-section services-section">
-      <div class="container">
-      	<div class="row justify-content-center">
+            
+            <div class="row justify-content-center">
           <form id="login-form" class="form" action="" method="post" name="registration">
-              <h3 class="text-center text-info">S'inscrire</h3>
+          <h1 class="mb-3 bread">Inscription</h1>
             <div class="form-group">
               <label for="username" class="text-info">Nom d'utilisateur:</label><br>
               <input type="text" name="username" class="form-control" required>
@@ -115,8 +107,14 @@
               <a href="connexion" class="text-info">Se connecter</a>
             </div>
          </form>
-    </div>   
+    </div>
+          </div>
+        </div>
+      </div>
     </section>
+
+    
+
   <?php } ?>
 
   <script src="../js/jquery.min.js"></script>
