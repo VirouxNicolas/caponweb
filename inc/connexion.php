@@ -51,38 +51,8 @@
             }
         }else{
     ?>
-    
-  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
-	    <div class="container">
-      <a class="navbar-brand" href="../index">CAPON <span>WEB</span></a>
-	      <div class="collapse navbar-collapse" id="ftco-nav">
-	        <ul class="navbar-nav ml-auto">
-	          <li class="nav-item"><a href="../index" class="nav-link">Accueil</a></li>
-	          <li class="nav-item"><a href="club" class="nav-link">Le Club</a></li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Le vol circulaire ?
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">La vitesse</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">L'acrobatie</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#"><Label>La course par équipe</Label></a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#"><Label>Le combat</Label></a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#"><Label>La maquette</Label></a>
-                </div>
-              </li>
-	          <li class="nav-item"><a href="blog.html" class="nav-link">Galerie photos</a></li>
-              <li class="nav-item"><a href="contact" class="nav-link">Contact</a></li>
-              <li class="nav-item active"><a href="connexion" class="nav-link">Connexion</a></li>
-	        </ul>
-	      </div>
-	    </div>
-	  </nav>
-    <!-- END nav -->
+    <?php include("navbar.php"); ?>
+  
     
     <section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('../images/accueil/site_CAP.jpg');" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
@@ -137,40 +107,5 @@
   <script src="../js/main.js"></script>
     
   </body>
-  <footer class="ftco-footer ftco-bg-dark ftco-section">
-      <div class="container">
-        <div class="row mb-5">
-          <div class="col-md">
-            <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">A propos de Capon Web</h2>
-              <p>Ased do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.</p>
-              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
-                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md">
-            <div class="ftco-footer-widget mb-4 ml-md-5">
-          </div>
-          <div class="col-md">
-          </div>
-          <div class="col-md">
-            <div class="ftco-footer-widget mb-4">
-            	<h2 class="ftco-heading-2">Avez-vous une question ?</h2>
-            	<div class="block-23 mb-3">
-	              <ul>
-	                <li><span class="icon icon-map-marker"></span><span class="text">23 Rue de Liege 1300 Wavre</span></li>
-	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+32 488 524 115</span></a></li>
-	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">contact@caponweb.be</span></a></li>
-	              </ul>
-	            </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          
-      </div>
-    </footer>
+  <?php include("footer.php"); ?>
 </html>
