@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="../css/bootstrap-datepicker.css">
     <link rel="stylesheet" href="../css/jquery.timepicker.css">
 
+    
     <link rel="stylesheet" href="../css/flaticon.css">
     <link rel="stylesheet" href="../css/icomoon.css">
     <link rel="stylesheet" href="../css/style.css">
@@ -46,38 +47,8 @@
             }
         }else{
     ?>
-    
-  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
-	    <div class="container">
-      <a class="navbar-brand" href="../index">CAPON <span>WEB</span></a>
-	      <div class="collapse navbar-collapse" id="ftco-nav">
-	        <ul class="navbar-nav ml-auto">
-	          <li class="nav-item"><a href="../index" class="nav-link">Accueil</a></li>
-	          <li class="nav-item"><a href="club" class="nav-link">Le Club</a></li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Le vol circulaire ?
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">La vitesse</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">L'acrobatie</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#"><Label>La course par équipe</Label></a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#"><Label>Le combat</Label></a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#"><Label>La maquette</Label></a>
-                </div>
-              </li>
-	          <li class="nav-item"><a href="blog.html" class="nav-link">Galerie photos</a></li>
-              <li class="nav-item"><a href="contact" class="nav-link">Contact</a></li>
-              <li class="nav-item active"><a href="connexion" class="nav-link">Connexion</a></li>
-	        </ul>
-	      </div>
-	    </div>
-	  </nav>
-    <!-- END nav -->
+    <?php include("navbar.php"); ?>
+  
     
     <section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('../images/accueil/site_CAP.jpg');" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
@@ -113,10 +84,7 @@
       </div>
     </section>
 
-    
-
   <?php } ?>
-
   <script src="../js/jquery.min.js"></script>
   <script src="../js/jquery-migrate-3.0.1.min.js"></script>
   <script src="../js/popper.min.js"></script>
@@ -136,4 +104,5 @@
   <script src="../js/main.js"></script>
     
   </body>
+  <?php include("footer.php"); ?>
 </html>
