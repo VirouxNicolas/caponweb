@@ -65,8 +65,9 @@
         <div class="row no-gutters slider-text justify-content-start align-items-center">
           <div class="col-lg-6 col-md-6 ftco-animate d-flex align-items-end">
           	<div class="text">
-	            <h1 class="mb-3"><strong>Bienvenue sur le nouveau site du</strong></h1>
-	            <p style="font-size: 20px;">Centre d'Aéromodélisme de Pepinster ASBL</p>
+            <p style="font-size: 20px;">Bienvenue sur le nouveau site du</p>
+	            <h1 class="mb-3"><strong>Centre d'Aéromodélisme de Pepinster ASBL</strong></h1>
+	            
             </div>
           </div>
           <div class="col-lg-2 col"></div>
