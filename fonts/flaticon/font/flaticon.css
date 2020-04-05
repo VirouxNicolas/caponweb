@@ -1,6 +1,6 @@
 	/*
   	Flaticon icon font: Flaticon
-  	Creation date: 24/07/2019 12:28
+  	Creation date: 06/05/2019 12:06
   	*/
 
 @font-face {
@@ -25,19 +25,19 @@
 [class^="flaticon-"]:before, [class*=" flaticon-"]:before,
 [class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
   font-family: Flaticon;
-        font-size: 20px;
-font-style: normal;
-margin-left: 20px;
+        font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.flaticon-customer-support:before { content: "\f100"; }
-.flaticon-route:before { content: "\f101"; }
-.flaticon-online-booking:before { content: "\f102"; }
-.flaticon-rent:before { content: "\f103"; }
-.flaticon-review:before { content: "\f104"; }
-.flaticon-dashboard:before { content: "\f105"; }
-.flaticon-car-machine:before { content: "\f106"; }
-.flaticon-car-seat:before { content: "\f107"; }
-.flaticon-backpack:before { content: "\f108"; }
-.flaticon-diesel:before { content: "\f109"; }
-.flaticon-select:before { content: "\f10a"; }
+.flaticon-airplane:before { content: "\f100"; }
+.flaticon-add:before { content: "\f101"; }
+.flaticon-ferry:before { content: "\f102"; }
+.flaticon-box:before { content: "\f103"; }
+.flaticon-lorry:before { content: "\f104"; }
+.flaticon-warehouse:before { content: "\f105"; }
