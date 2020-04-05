@@ -13,11 +13,11 @@
                 <form action="" method="post" id="login-form" name="login">
                     <div class="form-group row">
                         <div class="col-md-6 mb-4 mb-lg-0">
-                        <input type="username" class="form-control" id="username" name="username" placeholder="Nom d'utilisateur" required>
+                          <input type="username" class="form-control" id="username" name="username" placeholder="Nom d'utilisateur" required>
                         </div>
-
+                      
                         <div class="col-md-6 mb-4 mb-lg-0">
-                        <input type="email" class="form-control" id="username" name="email" placeholder="E-mail" required>
+                          <input type="email" class="form-control" id="username" name="email" placeholder="E-mail" required>
                         </div>
                     </div>
                     <div class="form-group row">
@@ -25,7 +25,7 @@
                             <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
                         </div>
                     </div>
-                  </div>
+                    
                   <div class="form-group row">
                     <div class="col-md-12 mr-auto">
                       <input type="submit" id="form-submit" class="btn btn-block btn-primary text-white py-3 px-5" value="S'inscrire">

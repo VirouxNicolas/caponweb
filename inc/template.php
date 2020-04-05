@@ -45,9 +45,7 @@
           include 'prix.php';
           include 'questions.php';
           include 'us.php';
-          include 'internationalContest.php';
           include 'blog.php';
-          include 'article.php';
         }
         else {
           switch($_GET['name']){
@@ -59,7 +57,12 @@
             break;
             case 'inside': 
               include 'us.php';
+            break;
+            case 'internationalContest': 
               include 'internationalContest.php';
+            break;
+            case 'contact': 
+              include 'contact.php';
             break;
           }
         }

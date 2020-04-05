@@ -17,24 +17,28 @@
                     echo '
                     <li><a href="index.php#home-section" class="nav-link">Accueil</a></li>
 
-                    <li><a href="#services-section" class="nav-link">Notre club</a></li>
-  
-  
+                    
                     <li class="has-children">
-                      <a href="#about-section" class="nav-link">Le vol circulaire</a>
+                      <a href="#services-section" class="nav-link">Notre club</a>
                       <ul class="dropdown arrow-top">
-                        <li><a href="#acrobatie" class="nav-link">Acrobatie</a></li>
-                        <li><a href="#team" class="nav-link">La course par équipe</a></li>
-                        <li><a href="#vitesse" class="nav-link">La vitesse</a></li>
+                        <li><a href="#services-section" class="nav-link">Notre club</a></li>
+                        <li><a href="#why-us-section" class="nav-link">Galerie photos</a></li> 
                       </ul>
                     </li>
-                    <li><a href="#why-us-section" class="nav-link">Galerie photos</a></li>
-                    <li><a href="#international-contest" class="nav-link">International Contest</a></li>
+                    <li class="has-children">
+                    <a href="#about-section" class="nav-link">Le vol circulaire</a>
+                    <ul class="dropdown arrow-top">
+                      <li><a href="#acrobatie" class="nav-link">Acrobatie</a></li>
+                      <li><a href="#team" class="nav-link">La course par équipe</a></li> 
+                      <li><a href="#vitesse" class="nav-link">La vitesse</a></li>
+                    </ul>
+                  </li>
+                    <li><a href="index.php?name=internationalContest" class="nav-link">International Contest</a></li>
                     
-                    <li><a href="#contact-section" class="nav-link">Contact</a></li>
+                    <li><a href="index.php?name=contact" class="nav-link">Contact</a></li>
 
                     <li class="has-children">
-                      <a href="#about-section" class="nav-link">Connexion</a>
+                      <a class="nav-link">Connexion</a>
                       <ul class="dropdown arrow-top">
                         <li><a href="index.php?name=connexion" class="nav-link">Connexion</a></li>
                         <li><a href="index.php?name=inscription" class="nav-link">Inscription</a></li>

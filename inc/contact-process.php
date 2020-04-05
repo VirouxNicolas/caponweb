@@ -1,36 +1,41 @@
 <?php
-$name = $_POST["name"];
-$prenom = $_POST["prenom"];
-$email = $_POST["email"];
-$message = $_POST["message"];
- 
-$EmailTo = "ibrahima.conde@hotmail.com";
-$Subject = "Vous avez un nouveau message";
- 
-$Body .= "Name: ";
-$Body .= $name;
-$Body .= "\n";
 
-$Body .= "Prenom: ";
-$Body .= $prenom;
-$Body .= "\n";
- 
-$Body .= "Email: ";
-$Body .= $email;
-$Body .= "\n";
- 
-$Body .= "Message: ";
-$Body .= $message;
-$Body .= "\n";
- 
+$to = "ibrahima.conde@hotmail.com";
+    $from = $_REQUEST['email'];
+    $name = $_REQUEST['name'];
+    $prenom = $_REQUEST['prenom'];
+    $cmessage = $_REQUEST['message'];
 
-$success = mail($EmailTo, $Subject, $Body, "From:".$email);
+    $headers = "From: $from";
+	$headers = "From: " . $from . "\r\n";
+	$headers .= "Reply-To: ". $from . "\r\n";
+	$headers .= "MIME-Version: 1.0\r\n";
+	$headers .= "Content-Type: text/html; charset=utf8_encode\r\n";
+
+    $subject = "Vous avez un nouveau message ";
+
+
+	$body = "<!DOCTYPE html><html lang='fr'><head><meta charset='UTF-8'><title>Contact</title></head><body>";
+	$body .= "<table style='width: 100%;'>";
+	$body .= "<thead style='text-align: center;'><tr><td style='border:none;' colspan='2'>";
+	$body .= "</td></tr></thead><tbody><tr>";
+    $body .= "<td style='border:none;'><strong>Nom:</strong> {$name}</td>";
+    $body .= "<td style='border:none;'><strong>Prenom:</strong> {$prenom}</td>";
+	$body .= "<td style='border:none;'><strong>Email:</strong> {$from}</td>";
+	$body .= "</tr>";
+	$body .= "<tr><td></td></tr>";
+	$body .= "<tr><td colspan='2' style='border:none;'>{$cmessage}</td></tr>";
+	$body .= "</tbody></table>";
+	$body .= "</body></html>";
+
+    $send = mail($to, $subject, $body, $headers);
+
  
-// redirect to success page
-if ($success){
-   echo "success";
-}else{
-    echo "invalid";
-}
+    // redirect to success page
+    if ($send){
+    echo "success";
+    }else{
+        echo "invalid";
+    }
  
 ?>
