@@ -92,6 +92,13 @@ INSERT INTO `users` (`id`, `username`, `email`, `password`, `trn_date`) VALUES
 (7, 'maxime', 'm@outlook.com', 'b238c13e822536cad3ac57a2280fbf45', '2020-03-19 13:30:58');
 COMMIT;
 
+
+CREATE USER 'nicolas'@'localhost' IDENTIFIED WITH mysql_native_password BY '*******';
+GRANT ALL PRIVILEGES ON * . * TO 'nicolas'@'localhost';
+
+CREATE USER 'admin'@'%%' IDENTIFIED BY '*******';
+GRANT ALL PRIVILEGES ON * . * TO 'admin'@'%%';
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
