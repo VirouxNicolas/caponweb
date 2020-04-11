@@ -1,38 +1,66 @@
-<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
-	    <div class="container">
+<header class="site-navbar js-sticky-header site-navbar-target" role="banner">
 
-        <a class="navbar-brand" href="../index.php">CAPON <span>WEB</span></a>
+        <div class="container">
+          <div class="row align-items-center position-relative">
 
-        <a class="navbar-brand" href="./accueil.php">CAPON <span>WEB</span></a>
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="oi oi-menu"></span> Menu
-	      </button>
-	      <div class="collapse navbar-collapse" id="ftco-nav">
-	        <ul class="navbar-nav ml-auto">
-	          <li class="nav-item active"><a href="../index.php" class="nav-link">Accueil</a></li>
-	          <li class="nav-item"><a href="club" class="nav-link">Le Club</a></li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Le vol circulaire ?
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">La vitesse</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">L'acrobatie</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#"><Label>La course par équipe</Label></a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#"><Label>Le combat</Label></a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#"><Label>La maquette</Label></a>
-                </div>
-              </li>
-	          <li class="nav-item"><a href="blog.html" class="nav-link">Galerie photos</a></li>
-              <li class="nav-item"><a href="contact" class="nav-link">Contact</a></li>
-              <li class="nav-item"><a href="./connexion.php" class="nav-link">Connexion</a></li>
-	        </ul>
-	      </div>
-	    </div>
-</nav>
-<!-- END nav -->
+            <div class="site-logo">
+              <a href="index.php#home-section" class="text-black"><span class="text-primary">CaponWeb</a>
+            </div>
+
+            <div class="col-12">
+              <nav class="site-navigation text-right ml-auto " role="navigation">
+
+                <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
+                  <?php 
+                  if(empty($_GET)){
+                    echo '
+                    <li><a href="index.php#home-section" class="nav-link">Accueil</a></li>
+
+                    
+                    <li class="has-children">
+                      <a href="#services-section" class="nav-link">Notre club</a>
+                      <ul class="dropdown arrow-top">
+                        <li><a href="#services-section" class="nav-link">Notre club</a></li>
+                        <li><a href="#why-us-section" class="nav-link">Galerie photos</a></li> 
+                      </ul>
+                    </li>
+                    <li class="has-children">
+                    <a href="#about-section" class="nav-link">Le vol circulaire</a>
+                    <ul class="dropdown arrow-top">
+                      <li><a href="#acrobatie" class="nav-link">Acrobatie</a></li>
+                      <li><a href="#team" class="nav-link">La course par équipe</a></li> 
+                      <li><a href="#vitesse" class="nav-link">La vitesse</a></li>
+                    </ul>
+                  </li>
+                    <li><a href="index.php?name=internationalContest" class="nav-link">International Contest</a></li>
+                    
+                    <li><a href="index.php?name=contact" class="nav-link">Contact</a></li>
+
+                    <li class="has-children">
+                      <a class="nav-link">Connexion</a>
+                      <ul class="dropdown arrow-top">
+                        <li><a href="index.php?name=connexion" class="nav-link">Connexion</a></li>
+                        <li><a href="index.php?name=inscription" class="nav-link">Inscription</a></li>
+                      </ul>
+                    </li>
+                    
+                  
+                  ';
+                  }
+                  else{
+                    echo '<li><a href="index.php#home-section" class="nav-link">Accueil</a></li>';
+                  }
+                  
+                  ?>
+                  </ul>
+              </nav>
+
+            </div>
+
+            <div class="toggle-button d-inline-block d-lg-none"><a href="#" class="site-menu-toggle py-5 js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+
+          </div>
+        </div>
+
+      </header>
