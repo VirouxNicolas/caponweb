@@ -1,5 +1,6 @@
 <?php
                     require('./db/db.php');
+
                     if (isset($_POST['username'])){
                         $username = stripslashes($_REQUEST['username']); // récupérer l'email et supprimer les antislashes ajoutés par le formulaire
                         $username = mysqli_real_escape_string($con,$username); //escapes special characters in a string
@@ -14,7 +15,7 @@
                               header('Location: index.php?name=inside');
                             }
                             else {
-                              echo "nom d'utilisateur ou mot de passe incorrect";
+                              $messageErreur =  "nom d'utilisateur ou mot de passe incorrect";
                             }
                       }
                 ?>
@@ -30,6 +31,8 @@
             </div>
             <div class="row">
               <div class="col-lg-12 mb-5" data-aos="fade-up" data-aos-delay="100">
+              <?php if(isset($messageOK)){ ?><div class="alert alert-success" role="alert"> <?php echo $messageOK; ?> </div><?php } ?>
+              <?php if(isset($messageErreur)){ ?><div class="alert alert-danger" role="alert"> <?php echo $messageErreur; ?> </div><?php } ?>
                 <form action="" method="post" id="contactForm" name="login">
                   <div class="form-group row">
                     <div class="col-md-6 mb-4 mb-lg-0">
