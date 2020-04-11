@@ -4,6 +4,9 @@
             <div class="row align-items-center">
               <div class="col-lg-6">
                 <h1>Bienvenue sur le site du Centre d'aéromodélisme de Pepinster ASBL</h1>
+                <!-- 
+                  <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est magni perferendis fugit modi similique, suscipit, deserunt a iure.</p>
+                 -->
                 <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est magni perferendis fugit modi similique, suscipit, deserunt a iure.</p>
               </div>
             </div>

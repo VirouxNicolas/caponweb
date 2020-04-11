@@ -64,6 +64,11 @@
             case 'contact': 
               include 'contact.php';
             break;
+            case 'categorie': 
+              include 'vitesse.php';
+              include 'acrobatie.php';
+              include 'team.php';
+            break;
           }
         }
 
