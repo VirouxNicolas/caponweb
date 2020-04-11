@@ -5,10 +5,10 @@
 
 	function getUsers()
 	{
-		global $conn;
+		global $con;
 		$query = "SELECT * FROM users";
 		$response = array();
-		$result = mysqli_query($conn, $query);
+		$result = mysqli_query($con, $query);
 		while($row = mysqli_fetch_array($result))
 		{
 			$response[] = $row;
@@ -19,14 +19,14 @@
 	
 	function getUser($id=0)
 	{
-		global $conn;
+		global $con;
 		$query = "SELECT * FROM users";
 		if($id != 0)
 		{
 			$query .= " WHERE id=".$id." LIMIT 1";
 		}
 		$response = array();
-		$result = mysqli_query($conn, $query);
+		$result = mysqli_query($con, $query);
 		while($row = mysqli_fetch_array($result))
 		{
 			$response[] = $row;
