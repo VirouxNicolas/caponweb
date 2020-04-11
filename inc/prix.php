@@ -1,4 +1,4 @@
-<div class="site-section bg-light" id="prix">
+<div class="site-section py-5" id="prix">
         <div class="container">
           <div class="row mb-5 justify-content-center text-center">
             <div class="col-md-7">

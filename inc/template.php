@@ -40,12 +40,12 @@
           //return true;
           include 'cover.php';
           include 'club.php';
-          include 'about.php';
-          include 'staff.php';
+          //include 'about.php';
+          //include 'staff.php';
           include 'prix.php';
-          include 'questions.php';
-          include 'us.php';
-          include 'blog.php';
+          //include 'questions.php';
+          //include 'us.php';
+          //include 'blog.php';
         }
         else {
           switch($_GET['name']){
@@ -64,6 +64,12 @@
             case 'contact': 
               include 'contact.php';
             break;
+            case 'photos': 
+              include 'photos.php';
+            break;
+            case 'liens': 
+              include 'liens.php';
+            break;
             case 'categorie': 
               include 'vitesse.php';
               include 'acrobatie.php';
@@ -75,12 +81,6 @@
       ?>
     
       <?php include 'footer.php';?>
-      
-      */
-    
-
-    
-
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>

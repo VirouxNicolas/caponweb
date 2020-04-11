@@ -27,7 +27,7 @@
 
               <div class="form-group row">
                 <div class="col-md-12">
-                  <textarea name="message" id="message" name="message" class="form-control" placeholder="ecrivez votre message ici" cols="30" rows="10"></textarea>
+                  <textarea name="message" id="message" name="message" class="form-control" placeholder="Ecrivez votre message ici" cols="30" rows="10"></textarea>
                 </div>
               </div>
               <div class="form-group row">
@@ -43,9 +43,9 @@
               <ul class="list-unstyled footer-link">
                 <li class="d-block mb-3">
                   <span class="d-block text-black">Adresse:</span>
-                  <span>34 Street Name, City Name Here, United States</span></li>
-                <li class="d-block mb-3"><span class="d-block text-black">Phone:</span><span>+1 242 4942 290</span></li>
-                <li class="d-block mb-3"><span class="d-block text-black">Email:</span><span>info@yourdomain.com</span></li>
+                  <span>Rue Ma Campagne (lieu-dit "Tri des Hayes"), <br> 4860 WEGNEZ, <br>Belgique</span></li>
+                <li class="d-block mb-3"><span class="d-block text-black">Telehone:</span><span>0475/54.75.60</span></li>
+                <li class="d-block mb-3"><span class="d-block text-black">Email:</span><span>info@caponweb.be</span></li>
               </ul>
             </div>
           </div>

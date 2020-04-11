@@ -32,6 +32,13 @@
                       case 'contact': 
                         include 'base.php';
                       break;
+                      case 'liens': 
+                        include 'base.php';
+                      break;
+                      case 'photos': 
+                        include 'base.php';
+                      break;
+                      
                     }                    
                   }
                   

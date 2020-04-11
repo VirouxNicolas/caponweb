@@ -12,7 +12,7 @@
           $query = "INSERT into `users` (username, password, email, trn_date) VALUES ('$username', '".md5($password)."', '$email', '$trn_date')";
           $result = mysqli_query($con,$query);
             if($result){
-                $messageOK = "<div class='form'><h3>Vous êtes enregistré avec succès.</h3></div>";
+                $messageOK = "<div class='form'><h3>Demande envoyée à l'administrateur.</h3></div>";
             }else{
                 $messageErreur = "maxime t'es une pute";
             }
@@ -23,7 +23,7 @@
             <div class="row">
               <div class="col-12 text-center mb-5" data-aos="fade-up" data-aos-delay="">
                 <div class="block-heading-1">
-                  <h2>Inscription</h2>
+                  <h2>Inscription au site </h2>
                 </div>
               </div>
             </div>
