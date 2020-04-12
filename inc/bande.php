@@ -21,9 +21,9 @@
         <div class="container">
           <div class="row">
             <div class="col-12">
-              <a href="#" class=""><span class="mr-2  icon-envelope-open-o"></span> <span class="d-none d-md-inline-block">info@caponweb.com</span></a>
+              <a href="mailto:" class="info@caponweb.com"><span class="mr-2  icon-envelope-open-o"></span> <span class="d-none d-md-inline-block">info@caponweb.com</span></a>
               <span class="mx-md-2 d-inline-block"></span>
-              <a href="#" class=""><span class="mr-2  icon-phone"></span> <span class="d-none d-md-inline-block">0475/54.75.60</span></a>
+              <a href="tel:0475547560" class=""><span class="mr-2  icon-phone"></span> <span class="d-none d-md-inline-block">0475/54.75.60</span></a>
 
             </div>
 
