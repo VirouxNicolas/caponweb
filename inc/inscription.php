@@ -14,7 +14,7 @@
             if($result){
                 $messageOK = "<div class='form'><h3>Demande envoyée à l'administrateur.</h3></div>";
             }else{
-                $messageErreur = "maxime t'es une pute";
+                $messageErreur = "Erreur";
             }
       }
 ?>
