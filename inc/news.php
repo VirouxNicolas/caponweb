@@ -9,11 +9,7 @@
             </div>
           </div>
             <form action="./inc/contact-process.php" method="post" id="newsForm">
-            <div class="form-group row">
-              <div class="col-md-12">
-                <h5> Illustrer votre news avec une image</h5> <input type="file" name="photo" id="photo" />
-                </div>
-              </div>
+            
               <div class="form-group row">
                 <div class="col-md-6 mb-4 mb-lg-0">
                   <input type="text" class="form-control" id="titre" name="titre" placeholder="Titre de votre news" required>
@@ -24,6 +20,11 @@
               <div class="form-group row">
                 <div class="col-md-12">
                   <textarea name="message" id="message" name="message" class="form-control" placeholder="Ecrivez votre news ici"  rows="5"></textarea>
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-md-12">
+                  <h5> Illustrer votre news avec une image</h5> <input type="file" name="photo" id="photo" />
                 </div>
               </div>
               <div class="form-group row">
