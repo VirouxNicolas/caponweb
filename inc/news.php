@@ -1,4 +1,4 @@
-<div class="site-section bg-light block-13" id="international-contest" data-aos="fade">
+<div class="site-section bg-light block-13" id="news-form" data-aos="fade">
         <div class="container">
 
           <div class="text-center mb-5">
@@ -8,7 +8,7 @@
               
             </div>
           </div>
-            <form action="./inc/contact-process.php" method="post" id="contactForm">
+            <form action="./inc/contact-process.php" method="post" id="newsForm">
             <div class="form-group row">
               <div class="col-md-12">
                 <h5> Illustrer votre news avec une image</h5> <input type="file" name="photo" id="photo" />
