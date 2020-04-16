@@ -22,11 +22,7 @@
     function getvalidnews($id=0)
     {
         global $con;
-        $query = "SELECT * FROM newsarticles";
-        if($id != 0)
-        {
-            $query .= " WHERE confirmation=".$id." LIMIT 1";
-        }
+        $query = "SELECT * FROM newsarticles  WHERE confirmation=".$id;
         $response = array();
         $result = mysqli_query($con, $query);
         while($row = mysqli_fetch_array($result))

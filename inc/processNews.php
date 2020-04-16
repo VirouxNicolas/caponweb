@@ -1,5 +1,5 @@
 <?php
-      require('s./db/db.php');
+      require('./db/db.php');
       if (isset($_POST['name'])){
           $name = stripslashes($_REQUEST['name']);
           $name = mysqli_real_escape_string($con,$name);
