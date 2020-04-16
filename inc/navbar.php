@@ -38,6 +38,9 @@
                       case 'photos': 
                         include 'base.php';
                       break;
+                      case 'news': 
+                        include 'base.php';
+                      break;
                       
                     }                    
                   }
