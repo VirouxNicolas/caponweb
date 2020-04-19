@@ -41,6 +41,9 @@
                       case 'news': 
                         include 'base.php';
                       break;
+                      case 'listnews': 
+                        include 'base.php';
+                      break;
                       
                     }                    
                   }

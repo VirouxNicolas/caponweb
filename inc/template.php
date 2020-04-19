@@ -75,6 +75,9 @@
               include 'acrobatie.php';
               include 'team.php';
             break;
+            case 'listnews': 
+              include 'listnews.php';
+            break; 
             case 'news': 
               include 'news.php';
             break; 

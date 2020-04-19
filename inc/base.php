@@ -28,7 +28,7 @@
                       <ul class="dropdown arrow-top">
                         <li><a href="index.php?name=connexion" class="nav-link">Connexion</a></li>
                         <li><a href="index.php?name=inscription" class="nav-link">Inscription au site</a></li>
-                        <li><a href="index.php?name=news" class="nav-link">News</a></li>
+                        <li><a href="index.php?name=listnews" class="nav-link">News</a></li>
                       </ul>
                     </li>
                   
