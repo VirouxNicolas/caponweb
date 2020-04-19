@@ -13,3 +13,4 @@ ajaxGet("http://localhost/Caponweb1/db/news.php", function (reponse) {
         articlesElt.appendChild(contenuElt);
     });
 });
+

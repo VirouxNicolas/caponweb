@@ -50,6 +50,12 @@
                     </div>
                   </div>
                 </form>
+                <div class="form-group row">
+                    <div class="col-md-12 mr-auto">
+                    Pas encore membre de notre communauté? <a href="index.php?name=inscription" class="nav-link">Inscrivez-vous</a>
+                    </div>
+                  </div>
+                </form>
                 
               </div>
             </div>
