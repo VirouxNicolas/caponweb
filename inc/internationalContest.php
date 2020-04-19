@@ -275,7 +275,12 @@
                   <input type="text" class="form-control" id="license" name="license" placeholder="FAI Licence" required>
                 </div>
                 <div class="col-md-6">
-                  <input type="text" class="form-control" id="category" name="category" placeholder="category" required>
+                  <label for="" class="label">Category</label>
+                  <select name="choix"  >
+                    <option value="F2A">F2A</option>
+                    <option value="F2B">F2B</option>
+                    <option value="F2C">F2C</option>
+                </select>
                 </div>
               </div>
               <div class="form-group row">
@@ -288,11 +293,11 @@
               </div>
               <div class="form-group row">
                 <div class="col-md-12">
-                  <textarea name="message" id="message" name="message" class="form-control" placeholder="ecrivez votre message ici"  rows="5"></textarea>
+                  <textarea name="message" id="message" name="message" class="form-control" placeholder="Ecrivez votre message ici"  rows="5"></textarea>
                 </div>
               </div>
               <div class="form-group row">
-                <div class="col-md-6 mr-auto">
+                <div class="col-md-12 mr-auto">
                   <input type="submit" id="form-submit" class="btn btn-block btn-primary text-white py-3 px-5" value="Envoyez">
                 </div>
               </div>
