@@ -1,19 +1,18 @@
-<body>
-<div class="block__73694 site-section border-top" id="why-us-section">
-        <div class="container">
-          <div class="row d-flex no-gutters align-items-stretch">
-          <a href="index.php?name=news" class="nav-link">Creer une News</a>
-            <div class="col-lg-5 mr-auto p-lg-5 mt-4 mt-lg-0 order-lg-1" data-aos="fade-right" data-aos-delay="">
-                <h1>Derniers articles</h1>
-                <div id="idNews">
-                </div>
+<section class="ftco-section">
+    <div class="container">
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-10 text-center d-flex ftco-animate">
+        <div class="blog-entry justify-content-end">
+            <img src="./images/accueilImage.jpg" alt="Image" class="img-thumbnail">
+            <div class="text pt-4">
+            <div class="meta mb-3">
+                <span id="idNews" class="d-block text-muted"></span>
             </div>
-          </div>
+            <h2 id="idNews" class="heading mt-2"></h2>
+            <p id="idNews"></p>
+            </div>
         </div>
-</div>
-    <script src="js/ajax.js"></script>
-    <script src="js/validarticle.js"></script>  
-
-</body>
-
-
+        </div>
+</section>
+<script src="js/ajax.js"></script>
+<script src="js/validarticle.js"></script>
