@@ -1,5 +1,5 @@
 var articlesElt = document.getElementById("idNews");
-ajaxGet("http://51.75.126.61/db/news.php", function (reponse) {
+ajaxGet("http://51.75.126.61/db/news.php?id=1", function (reponse) {
     // Transforme la réponse en un tableau d'articles
     var articles = JSON.parse(reponse);
     articles.forEach(function (article) {
