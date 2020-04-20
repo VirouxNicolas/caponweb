@@ -1,29 +1,10 @@
-<?php
-      require('./db/db.php');
-      if (isset($_REQUEST['username'])){
-          $username = stripslashes($_REQUEST['username']); // enlever backslashes
-          $username = mysqli_real_escape_string($con,$username); //escapes special characters in a string
-          $email = stripslashes($_REQUEST['email']);
-          $email = mysqli_real_escape_string($con,$email);
-          $password = stripslashes($_REQUEST['password']);
-          $password = mysqli_real_escape_string($con,$password);
-                    
-          $trn_date = date("Y-m-d H:i:s");
-          $query = "INSERT into `users` (username, password, email, trn_date) VALUES ('$username', '".md5($password)."', '$email', '$trn_date')";
-          $result = mysqli_query($con,$query);
-            if($result){
-                $messageOK = "<div class='form'><h3>Vous êtes enregistré avec succès.</h3></div>";
-            }else{
-                $messageErreur = "maxime t'es une pute";
-            }
-      }
-?>
-    <div class="site-section" id="connexion-section">
+<?php include 'processInscription.php';?>
+   <div class="site-section" id="connexion-section">
           <div class="container">
             <div class="row">
               <div class="col-12 text-center mb-5" data-aos="fade-up" data-aos-delay="">
                 <div class="block-heading-1">
-                  <h2>Inscription</h2>
+                  <h2>Inscription au site </h2>
                 </div>
               </div>
             </div>
