@@ -32,7 +32,7 @@
               </div>
               <div class="form-group row">
                 <div class="col-md-6 mr-auto">
-                  <input type="submit" id="form-submit" class="btn btn-block btn-primary text-white py-3 px-5" value="Envoyer">
+                  <input type="submit" id="form-submit" class="btn btn-block btn-primary text-white py-3 px-5" value="Send Message">
                 </div>
               </div>
             </form>
