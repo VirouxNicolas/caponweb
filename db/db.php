@@ -1,7 +1,7 @@
 <?php
 	$server = '51.75.126.61';
-	$username = 'root';
-	$password = 'devinci';
+	$username = 'admin';
+	$password = '********';
 	$db = 'caponweb';
 	$con = mysqli_connect($server, $username, $password, $db);
 	if (mysqli_connect_errno())
