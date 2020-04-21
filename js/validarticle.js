@@ -7,18 +7,21 @@ ajaxGet("http://localhost/caponweb/db/news.php/1", function (reponse) {
         // Ajout du titre et du contenu de chaque article
         var logoElt = document.createElement("img");
         logoElt.src = article.pictures;
-        var nameElt = document.createElement("span");
-        nameElt.textContent = article.name;
+        var nameElt = document.createElement("h5");
+        nameElt.textContent = 'auteur: ' + article.name;
+        var dateElt = document.createElement("h6");
+        dateElt.textContent = 'Date: ' + article.date_creation;
         var titreElt = document.createElement("h2");
         titreElt.textContent = article.subject;
         var contenuElt = document.createElement("p");
         contenuElt.textContent = article.descriptionArticles;
-        var dateElt = document.createElement("h5");
-        dateElt.textContent = article.date_creation;
+        var divider = document.createElement("hr");
+        divider.textContent = '';
         articlesElt.appendChild(logoElt);
         articlesElt.appendChild(nameElt);
+        articlesElt.appendChild(dateElt);
         articlesElt.appendChild(titreElt);
         articlesElt.appendChild(contenuElt);
-        articlesElt.appendChild(dateElt);
+        articlesElt.appendChild(divider);
     });
 });

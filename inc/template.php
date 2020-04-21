@@ -81,6 +81,12 @@
             case 'news': 
               include 'news.php';
             break; 
+            case 'home': 
+              include 'home.php';
+            break; 
+            case 'deconnexion': 
+              include 'deconnexion.php';
+            break; 
           }
         }
 
