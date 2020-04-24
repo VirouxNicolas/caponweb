@@ -1,6 +1,7 @@
 # Mise en place du site web 
 
 
- ## CENTRE D'AÉROMODÉLISME DE PEPINSTER ASBL
+ ### Centre Aéromodélisme de Pepinster ASBL
 
-# Réalisé par :
+
+## Réalisé par :
