@@ -104,6 +104,7 @@
     <script src="js/jquery.fancybox.min.js"></script>
     <script src="js/jquery.easing.1.3.js"></script>
     <script src="js/aos.js"></script>
+    <script src="js/mdp.js"></script>
 
     <script src="js/main.js"></script>
 
