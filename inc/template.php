@@ -10,6 +10,7 @@
     
     <!--Fontawesome CDN-->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link rel="icon" href="./images/logo.jpg" type="image/png">
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -81,6 +82,12 @@
             case 'news': 
               include 'news.php';
             break; 
+            case 'home': 
+              include 'home.php';
+            break; 
+            case 'deconnexion': 
+              include 'deconnexion.php';
+            break; 
           }
         }
 
@@ -97,6 +104,7 @@
     <script src="js/jquery.fancybox.min.js"></script>
     <script src="js/jquery.easing.1.3.js"></script>
     <script src="js/aos.js"></script>
+    <script src="js/mdp.js"></script>
 
     <script src="js/main.js"></script>
 

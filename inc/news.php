@@ -13,7 +13,7 @@
               <?php if(isset($messageOK)){ ?><div class="alert alert-success" role="alert"> <?php echo $messageOK; ?> </div><?php } ?>
               <?php if(isset($messageErreur)){ ?><div class="alert alert-danger" role="alert"> <?php echo $messageErreur; ?> </div><?php } ?>
               
-                <form action="" method="post" id="login-form" name="login">
+                <form action="" method="post" id="login-form" name="login" enctype="multipart/form-data">
                     <div class="form-group row">
                         <div class="col-md-6 mb-4 mb-lg-0">
                           <input type="username" class="form-control" id="name" name="name" placeholder="Nom de l'auteur" required>
@@ -35,12 +35,13 @@
                     </div> 
                     <div class="form-group row">
                       <div class="col-md-12">
-                        <h5> Illustrer votre news avec une image</h5> <input type="file" name="pictures" id="pictures" />
+                      <input type="hidden" name="MAX_FILE_SIZE" value="1000000" />
+                        <h5> Illustrer votre news avec une image</h5> <input type="file" name="imageUpload" id="imageUpload" aria-describedby="imageUpload" required/>
                       </div>
                     </div>                  
                     <div class="form-group row">
                       <div class="col-md-12 mr-auto">
-                        <input type="submit" id="form-submit" class="btn btn-block btn-primary text-white py-3 px-5" value="Soumettre">
+                        <input type="submit" id="submit" class="btn btn-block btn-primary text-white py-3 px-5" value="Soumettre">
                       </div>
                   </div>
                 </form>

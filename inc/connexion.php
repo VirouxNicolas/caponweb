@@ -1,10 +1,10 @@
 <?php
                     require('./db/db.php');
-
+                    session_start();
                     if (isset($_POST['username'])){
-                        $username = stripslashes($_REQUEST['username']); // récupérer l'email et supprimer les antislashes ajoutés par le formulaire
+                        $username = stripslashes($_POST['username']); // récupérer l'email et supprimer les antislashes ajoutés par le formulaire
                         $username = mysqli_real_escape_string($con,$username); //escapes special characters in a string
-                        $password = stripslashes($_REQUEST['password']);
+                        $password = stripslashes($_POST['password']);
                         $password = mysqli_real_escape_string($con,$password);
                       //Verifier si l'utilisateur existe ou pas
                         $query = "SELECT * FROM `users` WHERE username='$username' and password='".md5($password)."'";
@@ -12,7 +12,7 @@
                         $rows = mysqli_num_rows($result);
                             if($rows==1){
                               $_SESSION['username'] = $username;
-                              header('Location: index.php?name=inside');
+                              header('Location: index.php?name=home');
                             }
                             else {
                               $messageErreur =  "nom d'utilisateur ou mot de passe incorrect";
@@ -50,7 +50,6 @@
                     </div>
                   </div>
                 </form>
-                
               </div>
             </div>
           </div>

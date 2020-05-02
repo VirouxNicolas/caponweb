@@ -1,6 +1,6 @@
 <?php
 
-$to = "ibrahima.conde@hotmail.com";
+$to = "contact.caponweb@gmail.com";
     $from = $_REQUEST['email'];
     $name = $_REQUEST['name'];
     $prenom = $_REQUEST['prenom'];
