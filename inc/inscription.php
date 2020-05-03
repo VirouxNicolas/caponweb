@@ -24,7 +24,10 @@
                     </div>
                     <div class="form-group row">
                         <div class="col-md-6 mb-4 mb-lg-0">
-                            <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
+                            <input type="password" class="form-control" id="password" name="password" placeholder="Mot de passe" required>
+                        </div>
+                        <div class="col-md-6 mb-4 mb-lg-0">
+                            <input type="password" class="form-control" id="mdp2" name="mdp2" placeholder="Confirmation mot de passe" required>
                         </div>
                     </div>
                     
@@ -32,6 +35,7 @@
                     <div class="col-md-12 mr-auto">
                       <input type="submit" id="form-submit" class="btn btn-block btn-primary text-white py-3 px-5" value="S'inscrire">
                     </div>
+                    
                   </div>
                 </form>
               </div>

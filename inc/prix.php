@@ -21,7 +21,7 @@
                 </ul>
                 
                   <p class="text-center">
-                  <a href="#" class="btn btn-primary btn-md text-white">Inscrivez-vous</a>
+                  <a href="index.php?name=contact" class="nav-link"><button  class="btn btn-primary text-white">Contactez-nous</button></a>
                 </p>
                 
               </div>
@@ -36,7 +36,7 @@
                 </ul>
                 
                   <p class="text-center">
-                  <a href="#" class="btn btn-primary btn-md text-white">Inscrivez-vous</a>
+                  <a href="index.php?name=contact" class="nav-link"><button  class="btn btn-primary text-white">Contactez-nous</button></a>
                 </p>
                 
               </div>
@@ -54,7 +54,7 @@
                 </ul>
                 
                   <p class="text-center">
-                  <a href="#" class="btn btn-primary btn-md text-white">Inscrivez-vous</a>
+                  <a href="index.php?name=contact" class="nav-link"><button  class="btn btn-primary text-white">Contactez-nous</button></a>
                 </p>
                 
               </div>
@@ -70,7 +70,7 @@
                 </ul>
                 
                   <p class="text-center">
-                  <a href="#" class="btn btn-primary btn-md text-white">Inscrivez-vous</a>
+                  <a href="index.php?name=contact" class="nav-link"><button  class="btn btn-primary text-white">Contactez-nous</button></a>
                 </p>
                 
               </div>
@@ -88,7 +88,7 @@
                 </ul>
                 
                   <p class="text-center">
-                  <a href="#" class="btn btn-primary btn-md text-white">Inscrivez-vous</a>
+                  <a href="index.php?name=contact" class="nav-link"><button  class="btn btn-primary text-white">Contactez-nous</button></a>
                 </p>
                 
               </div>
@@ -105,7 +105,7 @@
                 </ul>
                 
                   <p class="text-center">
-                  <a href="#" class="btn btn-primary btn-md text-white">Inscrivez-vous</a>
+                  <a href="index.php?name=contact" class="nav-link"><button  class="btn btn-primary text-white">Contactez-nous</button></a>
                 </p>
                 
               </div>
@@ -120,7 +120,7 @@
                 </ul>
                 
                   <p class="text-center">
-                  <a href="#" class="btn btn-primary btn-md text-white">Inscrivez-vous</a>
+                  <a href="index.php?name=contact" class="nav-link"><button  class="btn btn-primary text-white">Contactez-nous</button></a>
                 </p>
                 
               </div>

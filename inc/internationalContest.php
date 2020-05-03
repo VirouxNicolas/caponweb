@@ -6,7 +6,7 @@
               <h2>Inscription International Contest</h2>
             </div>
           </div>
-            <form action="./inc/contact-process.php" method="post" id="contactForm">
+            <form action="./inc/contact-contest.php" method="post" id="contactForm">
               <div class="form-group row">
                 <div class="col-md-6 mb-4 mb-lg-0">
                   <input type="text" class="form-control" id="name" name="name" placeholder="Nom" required>
@@ -264,7 +264,7 @@
                 </div>
                 <div class="col-md-6">
                   <label for="" class="label">Senior/Junior</label>
-                  <select name="choix"  >
+                  <select name="choixSJ"  >
                     <option value="senior">Senior</option>
                     <option value="junior">Junior</option>
                 </select>

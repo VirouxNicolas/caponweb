@@ -29,5 +29,13 @@ $to = "contact.caponweb@gmail.com";
 	$body .= "</body></html>";
 
     $send = mail($to, $subject, $body, $headers);
+
+ 
+    // redirect to success page
+    if ($send){
+    echo "success";
+    }else{
+        echo "invalid";
+    }
  
 ?>
