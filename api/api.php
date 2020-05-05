@@ -57,7 +57,7 @@ class API{
         }
     }
 
-    function addNewToDo(){
+    function addNew(){
         if(isset($_POST["name"])){
             $data = array(
                 ':name' => $_POST["name"],
@@ -66,6 +66,19 @@ class API{
                 ':descriptionArticles' => $_POST["descriptionArticles"]
             );
             $insert = $this->connect->prepare("INSERT INTO newsarticles (name, mail, subject, descriptionArticles, confirmation) VALUES (:name, :email, :subject, :descriptionArticles, 0)");
+            $insert->execute($data);
+        }
+    }
+
+    
+    function addUser(){
+        if(isset($_POST["username"])){
+            $data = array(
+                ':username' => $_POST["username"],
+                ':email' => $_POST["email"],
+                ':password' => $_POST["password"],
+            );
+            $insert = $this->connect->prepare("INSERT INTO users (username, email, password) VALUES (:username, :email, :password)");
             $insert->execute($data);
         }
     }

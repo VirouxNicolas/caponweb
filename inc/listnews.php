@@ -8,7 +8,7 @@
         
     </div>
     <div class="col-lg-5 mr-auto p-lg-5 mt-4 mt-lg-0 order-lg-1" data-aos="fade-right" data-aos-delay="">
-    <?php include 'curlnews.php';?>
+    <?php include 'affich_news.php';?>
      </div>
  </div>
 </section>

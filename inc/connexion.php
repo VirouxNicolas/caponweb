@@ -1,5 +1,5 @@
 <?php
-                    require('./db/db.php');
+                    require('./api/db.php');
                     session_start();
                     if (isset($_POST['username'])){
                         $username = stripslashes($_POST['username']); // récupérer l'email et supprimer les antislashes ajoutés par le formulaire

@@ -22,7 +22,11 @@ if($_GET["action"] == 'outputUsers'){
 }
 
 if($_GET["action"] == 'addNew'){
-    $data = $apiObject->addNewToDo();
+    $data = $apiObject->addNew();
+}
+
+if($_GET["action"] == 'addUser'){
+    $data = $apiObject->addUser();
 }
 
 echo json_encode($data);

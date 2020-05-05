@@ -59,7 +59,7 @@
                 }else{
                     var formData = $(this).serialize();
                     $.ajax({
-                        url: "inc/controller.php",
+                        url: "controller/creation_news.php",
                         method: "POST",
                         data: formData,
                         success:function(data){
