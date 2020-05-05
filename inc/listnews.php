@@ -8,6 +8,7 @@
         
     </div>
     <div class="col-lg-5 mr-auto p-lg-5 mt-4 mt-lg-0 order-lg-1" data-aos="fade-right" data-aos-delay="">
+<<<<<<< Updated upstream
 
         <?php
             $client = curl_init('http://localhost/maxIbra/api/apiHandler.php?action=outputData');
@@ -34,6 +35,9 @@
 
             echo $output;
         ?>
+=======
+    <?php include 'curlnews.php';?>
+>>>>>>> Stashed changes
      </div>
  </div>
 </section>
