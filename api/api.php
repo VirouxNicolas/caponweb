@@ -1,15 +1,28 @@
 <?php
+
+/**
+ * Class API
+ */
 class API{
     private $connect = '';
 
+    /**
+     * API constructor.
+     */
     function __construct(){
         $this->dbConnection();
     }
 
+    /**
+     * connection à la db
+     */
     function dbConnection(){
         $this->connect = new PDO("mysql:host=localhost;dbname=caponweb", "root", "");
     }
 
+    /**
+     * @return mixed
+     */
     function outputAllNews(){
         $select = $this->connect->prepare("SELECT * FROM newsArticles ORDER BY idNews");
         if($select->execute()){
@@ -22,7 +35,10 @@ class API{
             
         }
     }
-    
+
+    /**
+     * @return mixed
+     */
     function outputValidNews(){
         $select = $this->connect->prepare("SELECT * FROM newsArticles WHERE confirmation = 1");
         if($select->execute()){
@@ -34,6 +50,10 @@ class API{
         }
     }
 
+    /**
+     * fonction qui recupere les articles qui sont en attente
+     * @return mixed
+     */
     function outputWaitingNews(){
         $select = $this->connect->prepare("SELECT * FROM newsArticles WHERE confirmation = 0");
         if($select->execute()){
@@ -45,8 +65,11 @@ class API{
         }
     }
 
-   
 
+    /**
+     * fonction permettant de recuperer les utilisateurs dans bdd
+     * @return mixed
+     */
     function outputUsers(){
         $select = $this->connect->prepare("SELECT * FROM users ORDER BY id");
         if($select->execute()){
@@ -57,6 +80,13 @@ class API{
         }
     }
 
+    /**
+     * fonction permettant d'ajouter un article dans la bdd
+     * @param string name
+     * @param string email
+     * @param string subject
+     * @param string descriptionArticles
+     */
     function addNew(){
         if(isset($_POST["name"])){
             $data = array(
@@ -70,13 +100,22 @@ class API{
         }
     }
 
-    
+    /**
+     * fonction permettant de créer un utilisateur
+     * @param string username
+     * @param string email
+     * @param string password
+     */
     function addUser(){
         if(isset($_POST["username"])){
+            
+            $test = $_POST["password"];
+            $md5 = md5($test);
             $data = array(
+                
                 ':username' => $_POST["username"],
                 ':email' => $_POST["email"],
-                ':password' => $_POST["password"],
+                ':password' => $md5,
             );
             $insert = $this->connect->prepare("INSERT INTO users (username, email, password) VALUES (:username, :email, :password)");
             $insert->execute($data);
