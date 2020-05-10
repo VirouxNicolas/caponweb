@@ -12,7 +12,7 @@
                         $rows = mysqli_num_rows($result);
                             if($rows==1){
                               $_SESSION['username'] = $username;
-                              header('Location: index.php?name=home');
+                              header('Location: ./inc/dashboard.php?name=profile');
                             }
                             else {
                               $messageErreur =  "nom d'utilisateur ou mot de passe incorrect";
