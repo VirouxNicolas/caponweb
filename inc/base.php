@@ -19,7 +19,14 @@
                       <li><a href="index.php?name=categorie" class="nav-link">La vitesse</a></li>
                     </ul>
                   </li>
-                  <li><a href="index.php?name=listnews" class="nav-link">News</a></li>
+                  <li class="has-children">
+                  <a href="index.php?name=categorie" class="nav-link">News</a>
+                    <ul class="dropdown arrow-top">
+                    <li><a href="index.php?name=listnews" class="nav-link"> Consulter les news</a></li>
+                      <li><a href="index.php?name=news" class="nav-link">Créer une news</a></li> 
+                    </ul>
+                  </li>
+                  
                     <li><a href="index.php?name=internationalContest" class="nav-link">Inscription competition</a></li>
                     
                     <li><a href="index.php?name=contact" class="nav-link">Contact</a></li>
