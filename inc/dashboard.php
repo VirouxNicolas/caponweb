@@ -40,7 +40,10 @@
             break;
             case 'profile':
               include 'profile.php';
-          break;
+            break;
+            case 'contest':
+              include 'dash_international_contest.php';
+            break;
         }
     }
 

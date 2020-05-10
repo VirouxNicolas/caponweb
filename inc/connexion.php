@@ -1,6 +1,7 @@
 <?php
                     require('./api/db.php');
                     session_start();
+                    $_SESSION = [];
                     if (isset($_POST['username'])){
                         $username = stripslashes($_POST['username']); // récupérer l'email et supprimer les antislashes ajoutés par le formulaire
                         $username = mysqli_real_escape_string($con,$username); //escapes special characters in a string
@@ -9,9 +10,17 @@
                         //Verifier si l'utilisateur existe ou pas
                         $query = "SELECT * FROM `users` WHERE username='$username' and password='".md5($password)."'";
                         $result = mysqli_query($con,$query) or die(mysql_error());
-                        $rows = mysqli_num_rows($result);
-                            if($rows==1){
+                        
+                        
+                        $logged_in_user = mysqli_fetch_assoc($result);
+                        print_r($logged_in_user);
+                        
+                        $usertype = $logged_in_user['user_type'];
+                        print_r($usertype);
+
+                            if($logged_in_user){
                               $_SESSION['username'] = $username;
+                              $_SESSION['user_type'] = $usertype;
                               header('Location: ./inc/dashboard.php?name=profile');
                             }
                             else {
@@ -54,3 +63,6 @@
             </div>
           </div>
         </div>
+
+
+

@@ -48,5 +48,9 @@ if($_GET["action"] == 'addInscriptionContest'){
     $data = $apiObject->addInscriptionContest();
 }
 
+if($_GET["action"] == 'outputInternationalContest'){
+    $data = $apiObject->outputInternationalContest();
+}
+
 echo json_encode($data);
 ?>

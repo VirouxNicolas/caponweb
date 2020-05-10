@@ -41,7 +41,13 @@ exit(); }
               </a>
             <ul class="sub">
               <li><a href="dashboard.php?name=entrainement">Tous les articles</a></li>
-              <li><a href="dashboard.php?name=entrainement">Article en attente</a></li>
+
+              <?php if ($_SESSION['user_type'] == 'admin'){
+                echo '<li><a href="dashboard.php?name=entrainement">Article en attente</a></li>';
+              }
+              else{}
+              ?>
+              
             </ul>
           </li>
           <li class="sub-menu">
@@ -50,7 +56,7 @@ exit(); }
               <span>Inscription Competition</span>
               </a>
             <ul class="sub">
-              <li><a href="dashboard.php?name=entrainement">Liste des inscriptions</a></li>
+              <li><a href="dashboard.php?name=contest">Liste des inscriptions</a></li>
             </ul>
           </li>
           <li class="sub-menu">

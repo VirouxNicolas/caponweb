@@ -90,6 +90,16 @@ class API{
         }
     }
 
+    function outputInternationalContest(){
+        $select = $this->connect->prepare("SELECT * FROM inscription_contest");
+        if($select->execute()){
+            while($row = $select->fetch(PDO::FETCH_ASSOC)){
+                $data[] = $row;
+            }
+            return $data;
+        }
+    }
+
     /**
      * fonction permettant d'ajouter un article dans la bdd
      * @param string name

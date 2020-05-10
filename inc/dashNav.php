@@ -8,7 +8,11 @@
                 include 'dashBase.php';
               break;
             case 'profile': 
-            include 'dashBase.php';
+                include 'dashBase.php';
+            break;
+            case 'contest':
+                include 'dashBase.php';
+                /* include 'dash_international_contest.php'; */
             break;
         }
     }
