@@ -1,3 +1,10 @@
+<?php
+session_start();
+if(!isset($_SESSION["username"])){
+    header("Location: ../index.php?name=connexion");
+exit(); }
+
+?>
 <!-- js placed at the end of the document so the pages load faster -->
 <script src="../css/dashboard/lib/jquery/jquery.min.js"></script>
 
@@ -17,11 +24,11 @@
   $(document).ready(function() {
     var unique_id = $.gritter.add({
       // (string | mandatory) the heading of the notification
-      title: 'Welcome to Dashio!',
+      title: 'Bienvenue <?php echo $_SESSION['username']; ?>',
       // (string | mandatory) the text inside the notification
-      text: 'Hover me to enable the Close Button. You can hide the left sidebar clicking on the button next to the logo.',
+      text: 'Nous sommes heureux de vous accueillir sur notre site.',
       // (string | optional) the image to display on the left
-      image: '../css/dashboard/img/max.jpg',
+      //image: '../css/dashboard/img/max.jpg',
       // (bool | optional) if you want it to fade out on its own or just sit there
       sticky: false,
       // (int | optional) the time you want it to be alive for before fading out

@@ -80,6 +80,16 @@ class API{
         }
     }
 
+    function outputAdmin(){
+        $select = $this->connect->prepare("SELECT * FROM users WHERE user_type = 'admin' ");
+        if($select->execute()){
+            while($row = $select->fetch(PDO::FETCH_ASSOC)){
+                $data[] = $row;
+            }
+            return $data;
+        }
+    }
+
     /**
      * fonction permettant d'ajouter un article dans la bdd
      * @param string name
@@ -118,6 +128,24 @@ class API{
                 ':password' => $md5,
             );
             $insert = $this->connect->prepare("INSERT INTO users (username, email, password) VALUES (:username, :email, :password)");
+            $insert->execute($data);
+        }
+    }
+
+    function addInscriptionContest(){
+        if(isset($_POST["name"])){
+            $data = array(
+                ':name' => $_POST["name"],
+                ':prenom' => $_POST["prenom"],
+                ':country' => $_POST["country"],
+                ':choixSJ' => $_POST["choixSJ"],
+                ':licence' => $_POST["licence"],
+                ':category' => $_POST["category"],
+                ':email' => $_POST["email"],
+                ':reservation' => $_POST["reservation"],
+                ':message' => $_POST["message"]
+            );
+            $insert = $this->connect->prepare("INSERT INTO inscription_contest (name, prenom, country, choixSJ, licence,category, email, reservation, message) VALUES (:name, :prenom, :country, :choixSJ, :licence,:category, :email, :reservation, :message)");
             $insert->execute($data);
         }
     }

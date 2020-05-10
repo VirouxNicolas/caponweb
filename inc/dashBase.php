@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(!isset($_SESSION["username"])){
-    header("Location: index.php?name=connexion");
+    header("Location: ../index.php?name=connexion");
 exit(); }
 
 ?>
@@ -30,8 +30,8 @@ exit(); }
           <h5 class="centered"><?php echo $_SESSION['username']; ?></h5>
           <li class="mt">
             <a class="" href="dashboard.php?name=profile">
-              <i class="fa fa-dashboard"></i>
-              <span>Dashboard</span>
+              <i class="fa fa-user"></i>
+              <span>Profil</span>
               </a>
           </li>
           <li class="sub-menu">
@@ -40,8 +40,8 @@ exit(); }
               <span>News</span>
               </a>
             <ul class="sub">
-              <li><a href="dashboard.php?name=entrainement">Liste</a></li>
-              <li><a href="dashboard.php?name=entrainement">Valider</a></li>
+              <li><a href="dashboard.php?name=entrainement">Tous les articles</a></li>
+              <li><a href="dashboard.php?name=entrainement">Article en attente</a></li>
             </ul>
           </li>
           <li class="sub-menu">
@@ -50,7 +50,7 @@ exit(); }
               <span>Inscription Competition</span>
               </a>
             <ul class="sub">
-              <li><a href="dashboard.php?name=entrainement">Liste</a></li>
+              <li><a href="dashboard.php?name=entrainement">Liste des inscriptions</a></li>
             </ul>
           </li>
           <li class="sub-menu">
@@ -58,21 +58,12 @@ exit(); }
               <i class="fa fa-th"></i>
               <span>Entrainement</span>
               </a>
+            <ul class="sub">
+              <li><a href="dashboard.php?name=entrainement">Liste des entrainements</a></li>
+              <li><a href="dashboard.php?name=entrainement">Créer un entrainement</a></li>
+            </ul>
           </li>
-          <li>
-            <a href="dashboard.php?name=profile">
-              <i class="fa fa-envelope"></i>
-              <span>Profil</span>
-              <span class="label label-theme pull-right mail-info"></span>
-              </a>
-          </li>
-          <li>
-            <a href="dashboard.php?name=entrainement">
-              <i class="fa fa-envelope"></i>
-              <span>Gestion du compte</span>
-              <span class="label label-theme pull-right mail-info"></span>
-              </a>
-          </li>
+          
           
         </ul>
         <!-- sidebar menu end-->

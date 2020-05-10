@@ -6,7 +6,7 @@
                         $username = mysqli_real_escape_string($con,$username); //escapes special characters in a string
                         $password = stripslashes($_POST['password']);
                         $password = mysqli_real_escape_string($con,$password);
-                      //Verifier si l'utilisateur existe ou pas
+                        //Verifier si l'utilisateur existe ou pas
                         $query = "SELECT * FROM `users` WHERE username='$username' and password='".md5($password)."'";
                         $result = mysqli_query($con,$query) or die(mysql_error());
                         $rows = mysqli_num_rows($result);

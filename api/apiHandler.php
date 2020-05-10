@@ -28,6 +28,12 @@ if($_GET["action"] == 'outputUsers'){
     $data = $apiObject->outputUsers();
 }
 
+//recupere tous les admins
+if($_GET["action"] == 'outputAdmin'){
+    $data = $apiObject->outputAdmin();
+}
+
+
 //creer un article
 if($_GET["action"] == 'addNew'){
     $data = $apiObject->addNew();
@@ -36,6 +42,10 @@ if($_GET["action"] == 'addNew'){
 //creer un compte utilisateur
 if($_GET["action"] == 'addUser'){
     $data = $apiObject->addUser();
+}
+
+if($_GET["action"] == 'addInscriptionContest'){
+    $data = $apiObject->addInscriptionContest();
 }
 
 echo json_encode($data);
