@@ -44,6 +44,10 @@
             case 'contest':
               include 'dash_international_contest.php';
             break;
+            case 'attentelist':
+              include 'dash_waiting_article.php';
+            break;
+            
         }
     }
 

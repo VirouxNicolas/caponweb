@@ -43,7 +43,7 @@ exit(); }
               <li><a href="dashboard.php?name=entrainement">Tous les articles</a></li>
 
               <?php if ($_SESSION['user_type'] == 'admin'){
-                echo '<li><a href="dashboard.php?name=entrainement">Article en attente</a></li>';
+                echo '<li><a href="dashboard.php?name=attentelist">Article en attente</a></li>';
               }
               else{}
               ?>
