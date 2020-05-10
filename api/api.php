@@ -17,7 +17,7 @@ class API{
      * connection à la db
      */
     function dbConnection(){
-        $this->connect = new PDO("mysql:host=51.75.126.61;dbname=caponweb", "youraccount", "password");
+        $this->connect = new PDO("mysql:host=srv;dbname=caponweb", "", "");
     }
 
     /**
