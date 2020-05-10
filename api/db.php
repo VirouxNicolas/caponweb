@@ -1,12 +1,8 @@
 <?php
-	$server = "51.75.126.61";
-<<<<<<< Updated upstream
-	$username = "admin";
+	$server = "srv";
+
+	$username = "";
 	$password = "";
-=======
-	$username = "youraccount";
-	$password = "password";
->>>>>>> Stashed changes
 	$db = "caponweb";
 	$con = mysqli_connect($server, $username, $password, $db);
 	if (mysqli_connect_errno())
