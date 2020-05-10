@@ -1,5 +1,5 @@
 <?php
-	$server = '51.75.126.61';
+	$server = 'srv';
 	$username = '';
 	$password = '';
 	$db = 'caponweb';
