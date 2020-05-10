@@ -41,7 +41,17 @@ exit(); }
               </a>
             <ul class="sub">
               <li><a href="dashboard.php?name=entrainement">Tous les articles</a></li>
+<<<<<<< Updated upstream
               <li><a href="dashboard.php?name=entrainement">Article en attente</a></li>
+=======
+
+              <?php if ($_SESSION['user_type'] == 'admin'){
+                echo '<li><a href="dashboard.php?name=attentelist">Article en attente</a></li>';
+              }
+              else{}
+              ?>
+              
+>>>>>>> Stashed changes
             </ul>
           </li>
           <li class="sub-menu">
