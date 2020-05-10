@@ -272,11 +272,11 @@
               </div>
               <div class="form-group row">
                 <div class="col-md-6 mb-4 mb-lg-0">
-                  <input type="text" class="form-control" id="license" name="license" placeholder="FAI Licence" required>
+                  <input type="text" class="form-control" id="licence" name="licence" placeholder="FAI Licence" required>
                 </div>
                 <div class="col-md-6">
                   <label for="" class="label">Category</label>
-                  <select name="choix"  >
+                  <select name="category"  >
                     <option value="F2A">F2A</option>
                     <option value="F2B">F2B</option>
                     <option value="F2C">F2C</option>
@@ -298,8 +298,35 @@
               </div>
               <div class="form-group row">
                 <div class="col-md-12 mr-auto">
-                  <input type="submit" id="form-submit" class="btn btn-block btn-primary text-white py-3 px-5" value="Envoyez">
+                <input type="hidden" name="action" id="action" value="addInscriptionContest" />
+                  <input type="submit" id="form-submit" 
+                      name="form-submit" class="btn btn-block btn-primary text-white py-3 px-5" value="Envoyez" />
+                  
                 </div>
               </div>
             </form>
           </div>
+
+          <script>
+        $(document).ready(function(){
+
+            $('#contactForm').on('submit', function(event){
+                event.preventDefault();
+                if($('#name').val() == ''){
+                    alert('Nom field is required!');
+                }else{
+                    var formData = $(this).serialize();
+                    $.ajax({
+                        url: "controller/creation_inscriptionContest.php",
+                        method: "POST",
+                        data: formData,
+                        success:function(data){
+                            //outputData();
+                            $('#contactForm')[0].reset();
+                        }
+                    });
+                }
+            });
+
+        });
+    </script>
