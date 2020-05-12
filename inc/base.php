@@ -12,7 +12,7 @@
                       </ul>
                     </li>
                     <li class="has-children">
-                    <a href="index.php?name=categorie" class="nav-link">Le vol circulaire</a>
+                    <a href="" class="nav-link">Le vol circulaire</a>
                     <ul class="dropdown arrow-top">
                       <li><a href="index.php?name=categorie" class="nav-link">Acrobatie</a></li>
                       <li><a href="index.php?name=categorie" class="nav-link">La course par équipe</a></li> 
@@ -20,10 +20,10 @@
                     </ul>
                   </li>
                   <li class="has-children">
-                  <a href="index.php?name=categorie" class="nav-link">News</a>
+                  <a href="" class="nav-link">Articles</a>
                     <ul class="dropdown arrow-top">
-                    <li><a href="index.php?name=listnews" class="nav-link"> Consulter les news</a></li>
-                      <li><a href="index.php?name=news" class="nav-link">Créer une news</a></li> 
+                    <li><a href="index.php?name=listnews" class="nav-link"> Consulter les articles</a></li>
+                      <li><a href="index.php?name=news" class="nav-link">Créer un article</a></li> 
                     </ul>
                   </li>
                   
