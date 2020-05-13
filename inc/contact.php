@@ -32,7 +32,8 @@
           </div>
           <div class="form-group row">
             <div class="col-md-6 mr-auto">
-              <input type="submit" id="form-submit" class="btn btn-block btn-primary text-white py-3 px-5" value="Send Message">
+              <input type="submit" id="form-submit" class="btn btn-block btn-primary text-white py-3 px-5" value="Envoyez un message">
+              
             </div>
           </div>
         </form>

@@ -323,6 +323,7 @@
                         success:function(data){
                             //outputData();
                             $('#contactForm')[0].reset();
+                            alert("Inscription envoyé à l'administrateur");
                         }
                     });
                 }

@@ -1,15 +1,9 @@
 <?php
-<<<<<<< Updated upstream
-            $client = curl_init('http://51.75.126.61/api/apiHandler.php?action=outputValidNews');
-            curl_setopt($client, CURLOPT_RETURNTRANSFER, 1);
-            $response = curl_exec($client);
-            $result = json_decode($response);
-=======
-    $client = curl_init('http://51.75.126.61/api/apiHandler.php?action=outputValidNews');
+
+    $client = curl_init('http://51.75.126.61/api/apiHandler.php?action=outputAllNews');
     curl_setopt($client, CURLOPT_RETURNTRANSFER, true);
     $response = curl_exec($client);
     $result = json_decode($response);
->>>>>>> Stashed changes
 
             $output = '';
 

@@ -68,6 +68,7 @@
                         success:function(data){
                             
                             $('#user_form')[0].reset();
+                            alert('Votre compte a été créé');
                         }
                     });
                 }
