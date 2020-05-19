@@ -57,7 +57,8 @@ if($_GET["action"] == 'updateVisibleArticle'){
 }
 
 if($_GET["action"] == 'deleteArticle'){
-    $data = $apiObject->deleteArticle();
+    $id = $_GET["idNews"];
+    $data = $apiObject->deleteArticle($id);
 }
 
 echo json_encode($data);

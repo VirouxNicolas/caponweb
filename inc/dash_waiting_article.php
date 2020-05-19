@@ -38,10 +38,10 @@
                                   echo "<td>$row->subject</td>";
                                   echo "<td>$row->descriptionArticles</td>";
                                   //echo "<td>$row->pictures</td>";
-                                  echo "<td><a href='http://localhost/Caponweb1/api/apiHandler.php?action=updateVisibleArticle&idNews=$row->idNews'. <button class='btn'><i class='fa fa-check'></i></button></a></td>";
-                                  echo "<td>
-                                            <button class='btn'><i class='fa fa-trash'></i></button></td>";
-                                  //echo "<td>$row->date_creation</td>";
+                                  echo "<td><a href='http://localhost/Caponweb1/api/apiHandler.php?action=updateVisibleArticle&idNews=$row->idNews'<button class='btn'><i class='fa fa-check'></i></button></a></td>";
+                                  echo "<td><a href='http://localhost/Caponweb1/api/apiHandler.php?action=deleteArticle&idNews=$row->idNews'<button class='btn'><i class='fa fa-trash'></i></button></a></td>";
+                                  
+                                  
                                   
                                   echo "</tr>"; 
                               }

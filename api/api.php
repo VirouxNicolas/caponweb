@@ -162,21 +162,26 @@ class API{
 
     
     function updateVisibleArticle($id){
-        /* $insert = $this->connect->prepare("UPDATE newsarticles SET confirmation= WHERE idNews=15");
-        $data = array();
-        $insert->execute($data); */
-        
+              
         $select = $this->connect->prepare("UPDATE newsarticles SET confirmation=1 WHERE idNews=$id");
         $select->execute();
         
-        $data[] = 1;
+        $data[] = "Publier";
         return $data;
 
-        
-       
     }
 
+    function deleteArticle($id){
+              
+        $select = $this->connect->prepare("DELETE FROM newsarticles WHERE idNews=$id");
+        $select->execute();
+        
+        $data[] = "Supprime";
     
+        return $data;
+    }
+
+
 
 }
 
