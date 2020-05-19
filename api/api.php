@@ -17,14 +17,14 @@ class API{
      * connection à la db
      */
     function dbConnection(){
-        $this->connect = new PDO("mysql:host=srv;dbname=caponweb", "", "");
+        $this->connect = new PDO("mysql:host=51.75.126.61;dbname=caponweb", "", "");
     }
 
     /**
      * @return mixed
      */
     function outputAllNews(){
-        $select = $this->connect->prepare("SELECT * FROM newsarticles ORDER BY idNews");
+        $select = $this->connect->prepare("SELECT * FROM newsArticles ORDER BY idNews");
         if($select->execute()){
             while($row = $select->fetch(PDO::FETCH_ASSOC)){
                 $data[] = $row;
@@ -40,7 +40,7 @@ class API{
      * @return mixed
      */
     function outputValidNews(){
-        $select = $this->connect->prepare("SELECT * FROM newsarticles WHERE confirmation = 1");
+        $select = $this->connect->prepare("SELECT * FROM newsArticles WHERE confirmation = 1");
         if($select->execute()){
             while($row = $select->fetch(PDO::FETCH_ASSOC)){
                 $data[] = $row;
@@ -55,7 +55,7 @@ class API{
      * @return mixed
      */
     function outputWaitingNews(){
-        $select = $this->connect->prepare("SELECT * FROM newsarticles WHERE confirmation = 0");
+        $select = $this->connect->prepare("SELECT * FROM newsArticles WHERE confirmation = 0");
         if($select->execute()){
             while($row = $select->fetch(PDO::FETCH_ASSOC)){
                 $data[] = $row;
@@ -82,6 +82,16 @@ class API{
 
     function outputAdmin(){
         $select = $this->connect->prepare("SELECT * FROM users WHERE user_type = 'admin' ");
+        if($select->execute()){
+            while($row = $select->fetch(PDO::FETCH_ASSOC)){
+                $data[] = $row;
+            }
+            return $data;
+        }
+    }
+
+    function outputInternationalContest(){
+        $select = $this->connect->prepare("SELECT * FROM inscription_contest");
         if($select->execute()){
             while($row = $select->fetch(PDO::FETCH_ASSOC)){
                 $data[] = $row;
@@ -149,6 +159,71 @@ class API{
             $insert->execute($data);
         }
     }
+
+    
+    function updateVisibleArticle($id){
+              
+        $select = $this->connect->prepare("UPDATE newsarticles SET confirmation=1 WHERE idNews=$id");
+        $select->execute();
+        
+        $data[] = "Publier";
+        return $data;
+
+    }
+
+    function updateCacheArticle($id){
+              
+        $select = $this->connect->prepare("UPDATE newsarticles SET confirmation=0 WHERE idNews=$id");
+        $select->execute();
+        
+        $data[] = "Cacher";
+        return $data;
+
+    }
+
+    function deleteArticle($id){
+              
+        $select = $this->connect->prepare("DELETE FROM newsarticles WHERE idNews=$id");
+        $select->execute();
+        
+        $data[] = "Supprime";
+    
+        return $data;
+    }
+
+    function addEntrainement(){
+        if(isset($_POST["lieu"])){
+            $data = array(
+                ':lieu' => $_POST["lieu"],
+                ':date_entrainement' => $_POST["date_entrainement"],
+                ':heure_debut' => $_POST["heure_debut"],
+                ':heure_fin' => $_POST["heure_fin"]
+            );
+            $insert = $this->connect->prepare("INSERT INTO entrainement (lieu, date_entrainement, heure_debut, heure_fin, idUsers) VALUES ('Bierges','2020-09-05', '13:30','14:30',1)");
+            $insert->execute($data);
+        }
+    }
+
+
+    function updateAdminUtilisateur($id){
+              
+        $select = $this->connect->prepare("UPDATE users SET user_type='admin' WHERE id=$id");
+        $select->execute();
+        
+        $data[] = "Administrateur";
+        return $data;
+    }
+
+    function updateMembreUtilisateur($id){
+              
+        $select = $this->connect->prepare("UPDATE users SET user_type='membre' WHERE id=$id");
+        $select->execute();
+        
+        $data[] = "Membre";
+        return $data;
+    }
+
+
 
 }
 
