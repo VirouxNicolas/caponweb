@@ -20,6 +20,11 @@
                 include 'dashBase.php';
                 /* include 'dash_international_contest.php'; */
             break;
+            case 'tousutilisateur': 
+                include 'dashBase.php';
+            break;
+
+            
         }
     }
 ?>

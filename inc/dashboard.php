@@ -50,6 +50,11 @@
             case 'tousarticles':
               include 'dash_articles.php';
             break;
+            case 'tousutilisateur':
+              include 'dash_utilisateurs.php';
+            break;
+            
+
         }
     }
 

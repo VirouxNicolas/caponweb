@@ -70,6 +70,17 @@ if($_GET["action"] == 'addEntrainement'){
     $data = $apiObject->addEntrainement();
 }
 
+if($_GET["action"] == 'updateAdminUtilisateur'){
+    $id = $_GET["id"];
+    $data = $apiObject->updateAdminUtilisateur($id);
+}
+
+
+if($_GET["action"] == 'updateMembreUtilisateur'){
+    $id = $_GET["id"];
+    $data = $apiObject->updateMembreUtilisateur($id);
+}
+
 
 echo json_encode($data);
 ?>

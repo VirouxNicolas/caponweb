@@ -205,6 +205,25 @@ class API{
     }
 
 
+    function updateAdminUtilisateur($id){
+              
+        $select = $this->connect->prepare("UPDATE users SET user_type='admin' WHERE id=$id");
+        $select->execute();
+        
+        $data[] = "Administrateur";
+        return $data;
+    }
+
+    function updateMembreUtilisateur($id){
+              
+        $select = $this->connect->prepare("UPDATE users SET user_type='membre' WHERE id=$id");
+        $select->execute();
+        
+        $data[] = "Membre";
+        return $data;
+    }
+
+
 
 }
 
