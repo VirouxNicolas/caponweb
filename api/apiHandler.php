@@ -33,7 +33,6 @@ if($_GET["action"] == 'outputAdmin'){
     $data = $apiObject->outputAdmin();
 }
 
-
 //creer un article
 if($_GET["action"] == 'addNew'){
     $data = $apiObject->addNew();
@@ -50,6 +49,15 @@ if($_GET["action"] == 'addInscriptionContest'){
 
 if($_GET["action"] == 'outputInternationalContest'){
     $data = $apiObject->outputInternationalContest();
+}
+
+if($_GET["action"] == 'updateVisibleArticle'){
+    $id = 15;
+    $data = $apiObject->updateVisibleArticle($id);
+}
+
+if($_GET["action"] == 'deleteArticle'){
+    $data = $apiObject->deleteArticle();
 }
 
 echo json_encode($data);

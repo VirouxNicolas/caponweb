@@ -8,13 +8,15 @@
               <table cellpadding="0" cellspacing="0" border="0" class="display table table-bordered" id="hidden-table-info">
                 <thead>
                   <tr>
+                    <th>id</th>
                     <th>Auteur</th>
                     <th>Mail auteur</th>
                     <th>Sujet</th>
                     <th>Description</th>
                     <!--<th>Image</th>-->
-                    <th>Confirmation</th>
+                    <th>Confirmer</th>
                     <!--<th>Date</th>-->
+                    <th>Activité</th>
                     
                   </tr>
                 </thead>
@@ -30,12 +32,15 @@
 
                           if(count($result) > 0){
                               foreach($result as $row){
+                                echo "<td>$row->idNews</td>";
                                   echo "<td>$row->name</td>";
                                   echo "<td>$row->mail</td>";
                                   echo "<td>$row->subject</td>";
                                   echo "<td>$row->descriptionArticles</td>";
                                   //echo "<td>$row->pictures</td>";
-                                  echo "<td>$row->confirmation</td>";
+                                  echo "<td><button class='btn' href='controller/update_confirmation_article.php'><i class='fa fa-check'></i></button></td>";
+                                  echo "<td>
+                                            <button class='btn'><i class='fa fa-trash'></i></button></td>";
                                   //echo "<td>$row->date_creation</td>";
                                   
                                   echo "</tr>"; 
@@ -57,3 +62,27 @@
       </section>
       <!-- /wrapper -->
     </section>
+
+    <!-- <script>
+        $(document).ready(function(){
+
+            $('#contactForm').on('submit', function(event){
+                event.preventDefault();
+                if($('#name').val() == ''){
+                    alert('Nom field is required!');
+                }else{
+                    var formData = $(this).serialize();
+                    $.ajax({
+                        url: "controller/update_confirmation_article.php",
+                        method: "POST",
+                        data: formData,
+                        success:function(data){
+                            //outputData();
+                            $('#contactForm')[0].reset();
+                        }
+                    });
+                }
+            });
+
+        });
+    </script> -->

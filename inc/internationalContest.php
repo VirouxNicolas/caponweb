@@ -307,7 +307,7 @@
             </form>
           </div>
 
-          <script>
+          <!-- <script>
         $(document).ready(function(){
 
             $('#contactForm').on('submit', function(event){
@@ -329,4 +329,4 @@
             });
 
         });
-    </script>
+    </script> -->
