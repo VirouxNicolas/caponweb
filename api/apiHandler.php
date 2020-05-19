@@ -52,7 +52,7 @@ if($_GET["action"] == 'outputInternationalContest'){
 }
 
 if($_GET["action"] == 'updateVisibleArticle'){
-    $id = 15;
+    $id = $_GET["idNews"];
     $data = $apiObject->updateVisibleArticle($id);
 }
 
