@@ -40,7 +40,12 @@ exit(); }
               <span>News</span>
               </a>
             <ul class="sub">
-              <li><a href="dashboard.php?name=entrainement">Tous les articles</a></li>
+            
+            <?php if ($_SESSION['user_type'] == 'admin'){
+                echo '<li><a href="dashboard.php?name=tousarticles">Tous les articles</a></li>';
+              }
+              else{}
+              ?>
 
               <?php if ($_SESSION['user_type'] == 'admin'){
                 echo '<li><a href="dashboard.php?name=attentelist">Article en attente</a></li>';

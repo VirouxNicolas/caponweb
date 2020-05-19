@@ -13,6 +13,9 @@
             case 'attentelist': 
                 include 'dashBase.php';
             break;
+            case 'tousarticles': 
+                include 'dashBase.php';
+            break;
             case 'contest':
                 include 'dashBase.php';
                 /* include 'dash_international_contest.php'; */

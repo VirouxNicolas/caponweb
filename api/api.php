@@ -171,6 +171,16 @@ class API{
 
     }
 
+    function updateCacheArticle($id){
+              
+        $select = $this->connect->prepare("UPDATE newsarticles SET confirmation=0 WHERE idNews=$id");
+        $select->execute();
+        
+        $data[] = "Cacher";
+        return $data;
+
+    }
+
     function deleteArticle($id){
               
         $select = $this->connect->prepare("DELETE FROM newsarticles WHERE idNews=$id");
@@ -179,6 +189,19 @@ class API{
         $data[] = "Supprime";
     
         return $data;
+    }
+
+    function addEntrainement(){
+        if(isset($_POST["lieu"])){
+            $data = array(
+                ':lieu' => $_POST["lieu"],
+                ':date_entrainement' => $_POST["date_entrainement"],
+                ':heure_debut' => $_POST["heure_debut"],
+                ':heure_fin' => $_POST["heure_fin"]
+            );
+            $insert = $this->connect->prepare("INSERT INTO entrainement (lieu, date_entrainement, heure_debut, heure_fin, idUsers) VALUES ('Bierges','2020-09-05', '13:30','14:30',1)");
+            $insert->execute($data);
+        }
     }
 
 

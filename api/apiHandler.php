@@ -56,10 +56,20 @@ if($_GET["action"] == 'updateVisibleArticle'){
     $data = $apiObject->updateVisibleArticle($id);
 }
 
+if($_GET["action"] == 'updateCacheArticle'){
+    $id = $_GET["idNews"];
+    $data = $apiObject->updateCacheArticle($id);
+}
+
 if($_GET["action"] == 'deleteArticle'){
     $id = $_GET["idNews"];
     $data = $apiObject->deleteArticle($id);
 }
+
+if($_GET["action"] == 'addEntrainement'){
+    $data = $apiObject->addEntrainement();
+}
+
 
 echo json_encode($data);
 ?>
