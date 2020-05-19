@@ -15,7 +15,7 @@
               </div>
               <!-- /col-md-4 -->
               <div class="col-md-4 profile-text">
-                <h3 class="centered"><?php echo $_SESSION['username']; ?></h3>
+                <h3>Sam Soffes</h3>
                 <h6>Main Administrator</h6>
                 <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC.</p>
                 <br>
@@ -24,8 +24,11 @@
               <!-- /col-md-4 -->
               <div class="col-md-4 centered">
                 <div class="profile-pic">
-                  <!-- <img src="./images/person_1.jpg" class="img-circle"></p>--><p>
-                  
+                  <p><img src="../css/dashboard/img/max.jpg" class="img-circle"></p>
+                  <p>
+                    <button class="btn btn-theme"><i class="fa fa-check"></i> Follow</button>
+                    <button class="btn btn-theme02">Add</button>
+                  </p>
                 </div>
               </div>
               <!-- /col-md-4 -->

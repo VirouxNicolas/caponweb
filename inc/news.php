@@ -65,7 +65,6 @@
                         success:function(data){
                             //outputData();
                             $('#api_form')[0].reset();
-                            alert('Votre compte a été créé');
                         }
                     });
                 }

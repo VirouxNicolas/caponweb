@@ -40,9 +40,6 @@
             break;
             case 'profile':
               include 'profile.php';
-<<<<<<< Updated upstream
-          break;
-=======
             break;
             case 'contest':
               include 'dash_international_contest.php';
@@ -50,8 +47,18 @@
             case 'attentelist':
               include 'dash_waiting_article.php';
             break;
+            case 'tousarticles':
+              include 'dash_articles.php';
+            break;
+            case 'tousutilisateur':
+              include 'dash_utilisateurs.php';
+            break;
+            case 'deconnexion':
+              include 'deconnexion.php';
+            break;
+
             
->>>>>>> Stashed changes
+
         }
     }
 
@@ -83,3 +90,6 @@
 </body>
 
 </html>
+
+
+

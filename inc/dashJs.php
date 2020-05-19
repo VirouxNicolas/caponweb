@@ -1,10 +1,4 @@
-<?php
-session_start();
-if(!isset($_SESSION["username"])){
-    header("Location: ../index.php?name=connexion");
-exit(); }
 
-?>
 <!-- js placed at the end of the document so the pages load faster -->
 <script src="../css/dashboard/lib/jquery/jquery.min.js"></script>
 

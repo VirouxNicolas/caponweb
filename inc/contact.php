@@ -1,4 +1,3 @@
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <div class="site-section bg-light" id="contact-section">
   <div class="container">
     <div class="row">
@@ -25,18 +24,15 @@
               <input type="text" class="form-control" id="email" name="email" placeholder="Adresse mail" required>
             </div>
           </div>
-          
+
           <div class="form-group row">
             <div class="col-md-12">
               <textarea name="message" id="message" name="message" class="form-control" placeholder="Ecrivez votre message ici" cols="30" rows="10"></textarea>
             </div>
           </div>
-          <div class="g-recaptcha" data-sitekey="6LeWNfUUAAAAAPSaJ_4myhHnA_k1G2HGX_Ap2XV-" required>
-          <br>
           <div class="form-group row">
             <div class="col-md-6 mr-auto">
-              <input type="submit" id="form-submit" class="btn btn-block btn-primary text-white py-3 px-5" value="Envoyez un message">
-              
+              <input type="submit" id="form-submit" class="btn btn-block btn-primary text-white py-3 px-5" value="Send Message">
             </div>
           </div>
         </form>

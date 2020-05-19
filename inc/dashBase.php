@@ -18,7 +18,7 @@ exit(); }
       </div>
       <div class="top-menu">
         <ul class="nav pull-right top-menu">
-          <li><a class="logout" href="dashboard.php?name=deconnexion">Déconnexion</a></li>
+        <li><a class="logout" href="dashboard.php?name=deconnexion">Déconnexion</a></li>
         </ul>
       </div>
     </header>
@@ -26,7 +26,7 @@ exit(); }
       <div id="sidebar" class="nav-collapse ">
         <!-- sidebar menu start-->
         <ul class="sidebar-menu" id="nav-accordion">
-          <!-- <p class="centered"><a href="dashboard.php?name=entrainement"><img src="../css/dashboard/img/max.jpg" class="img-circle" width="80"></a></p> -->
+          <p class="centered"><a href="dashboard.php?name=entrainement"><img src="../css/dashboard/img/max.jpg" class="img-circle" width="80"></a></p>
           <h5 class="centered"><?php echo $_SESSION['username']; ?></h5>
           <li class="mt">
             <a class="" href="dashboard.php?name=profile">
@@ -40,9 +40,12 @@ exit(); }
               <span>News</span>
               </a>
             <ul class="sub">
-              <li><a href="dashboard.php?name=entrainement">Tous les articles</a></li>
-
-
+            
+            <?php if ($_SESSION['user_type'] == 'admin'){
+                echo '<li><a href="dashboard.php?name=tousarticles">Tous les articles</a></li>';
+              }
+              else{}
+              ?>
 
               <?php if ($_SESSION['user_type'] == 'admin'){
                 echo '<li><a href="dashboard.php?name=attentelist">Article en attente</a></li>';
@@ -50,7 +53,6 @@ exit(); }
               else{}
               ?>
               
-
             </ul>
           </li>
           <li class="sub-menu">
@@ -72,6 +74,25 @@ exit(); }
               <li><a href="dashboard.php?name=entrainement">Créer un entrainement</a></li>
             </ul>
           </li>
+
+          <li class="sub-menu">
+            <a href="javascript:;">
+              <i class="fa fa-desktop"></i>
+              <span>Utilisateur</span>
+              </a>
+            <ul class="sub">
+            
+            <?php if ($_SESSION['user_type'] == 'admin'){
+                echo '<li><a href="dashboard.php?name=tousutilisateur">Tous les utilisateurs</a></li>';
+              }
+              else{}
+              ?>
+
+              
+              
+            </ul>
+          </li>
+          
           
           
         </ul>
