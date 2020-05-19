@@ -24,7 +24,7 @@ class API{
      * @return mixed
      */
     function outputAllNews(){
-        $select = $this->connect->prepare("SELECT * FROM newsArticles ORDER BY idNews");
+        $select = $this->connect->prepare("SELECT * FROM newsarticles ORDER BY idNews");
         if($select->execute()){
             while($row = $select->fetch(PDO::FETCH_ASSOC)){
                 $data[] = $row;
@@ -40,7 +40,7 @@ class API{
      * @return mixed
      */
     function outputValidNews(){
-        $select = $this->connect->prepare("SELECT * FROM newsArticles WHERE confirmation = 1");
+        $select = $this->connect->prepare("SELECT * FROM newsarticles WHERE confirmation = 1");
         if($select->execute()){
             while($row = $select->fetch(PDO::FETCH_ASSOC)){
                 $data[] = $row;
@@ -55,7 +55,7 @@ class API{
      * @return mixed
      */
     function outputWaitingNews(){
-        $select = $this->connect->prepare("SELECT * FROM newsArticles WHERE confirmation = 0");
+        $select = $this->connect->prepare("SELECT * FROM newsarticles WHERE confirmation = 0");
         if($select->execute()){
             while($row = $select->fetch(PDO::FETCH_ASSOC)){
                 $data[] = $row;
