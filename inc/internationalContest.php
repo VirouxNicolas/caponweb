@@ -1,3 +1,4 @@
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <div class="site-section bg-light block-13" id="international-contest" data-aos="fade">
         <div class="container">
 
@@ -291,6 +292,8 @@
                   <input type="text" class="form-control" id="reservation" name="reservation" placeholder="Banquet reservation" required>
                 </div>
               </div>
+              <div class="g-recaptcha" data-sitekey="6LeWNfUUAAAAAPSaJ_4myhHnA_k1G2HGX_Ap2XV-" required>
+              <br>
               <div class="form-group row">
                 <div class="col-md-12">
                   <textarea name="message" id="message" name="message" class="form-control" placeholder="Ecrivez votre message ici"  rows="5"></textarea>
