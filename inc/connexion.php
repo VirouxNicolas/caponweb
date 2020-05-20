@@ -45,11 +45,11 @@
                 <form action="" method="post" id="contactForm" name="login">
                   <div class="form-group row">
                     <div class="col-md-6 mb-4 mb-lg-0">
-                      <input type="username" class="form-control" id="username" name="username" placeholder="Username" required>
+                      <input type="username" class="form-control" id="username" name="username" placeholder="Nom d'utilisateur" required>
                       
                     </div>
                     <div class="col-md-6">
-                      <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
+                      <input type="password" class="form-control" id="password" name="password" placeholder="Mot de passe" required>
                     </div>
                   </div>
     
