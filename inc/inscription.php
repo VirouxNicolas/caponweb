@@ -12,6 +12,7 @@
               <div class="col-lg-12 mb-5" data-aos="fade-up" data-aos-delay="100">
               <?php if(isset($messageOK)){ ?><div class="alert alert-success" role="alert"> <?php echo $messageOK; ?> </div><?php } ?>
               <?php if(isset($messageErreur)){ ?><div class="alert alert-danger" role="alert"> <?php echo $messageErreur; ?> </div><?php } ?>
+              
               <form method="POST" id="user_form">
               
                     <div class="form-group row">

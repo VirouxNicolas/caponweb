@@ -1,6 +1,6 @@
- <section id="main-content">
+<section id="main-content">
       <section class="wrapper">
-        <h3><i class="fa fa-angle-right"></i>ARTICLE EN ATTENTE</h3>
+        <h3><i class="fa fa-angle-right"></i>ADMINISTRATION UTILISATEURS</h3>
         <div class="row mb">
           <!-- page start-->
           <div class="content-panel">
@@ -9,21 +9,20 @@
                 <thead>
                   <tr>
                     <th>id</th>
-                    <th>Auteur</th>
-                    <th>Mail auteur</th>
-                    <th>Sujet</th>
-                    <th>Description</th>
-                    <!--<th>Image</th>-->
-                    <th>Confirmer</th>
-                    <!--<th>Date</th>-->
-                    <th>Activité</th>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Date</th>
+                    <th>Type</th>
+                    <th>Administrateur</th>
+                    <th>Membre</th>
+                    
                     
                   </tr>
                 </thead>
                 <tbody>
                   <tr class="gradeX">
                     <?php
-                          $client = curl_init('http://localhost/Caponweb1/api/apiHandler.php?action=outputWaitingNews');
+                          $client = curl_init('http://localhost/Caponweb1/api/apiHandler.php?action=outputUsers');
                           curl_setopt($client, CURLOPT_RETURNTRANSFER, 1);
                           $response = curl_exec($client);
                           $result = json_decode($response);
@@ -32,16 +31,15 @@
 
                           if(count($result) > 0){
                               foreach($result as $row){
-                                echo "<td>$row->idNews</td>";
-                                  echo "<td>$row->name</td>";
-                                  echo "<td>$row->mail</td>";
-                                  echo "<td>$row->subject</td>";
-                                  echo "<td>$row->descriptionArticles</td>";
-                                  //echo "<td>$row->pictures</td>";
-                                  echo "<td><a href='http://localhost/Caponweb1/api/apiHandler.php?action=updateVisibleArticle&idNews=$row->idNews'<button class='btn'><i class='fa fa-check'></i></button></a></td>";
-                                  echo "<td><a href='http://localhost/Caponweb1/api/apiHandler.php?action=deleteArticle&idNews=$row->idNews'<button class='btn'><i class='fa fa-trash'></i></button></a></td>";
+                                echo "<td>$row->id</td>";
+                                  echo "<td>$row->username</td>";
+                                  echo "<td>$row->email</td>";
+                                  echo "<td>$row->trn_date</td>";
+                                  echo "<td>$row->user_type</td>";
+                                
+                                  echo "<td><a href='http://localhost/Caponweb1/api/apiHandler.php?action=updateAdminUtilisateur&id=$row->id'<button class='btn'><i class='fa fa-eye-slash'></i></button></a></td>";
                                   
-                                  
+                                  echo "<td><a href='http://localhost/Caponweb1/api/apiHandler.php?action=updateMembreUtilisateur&id=$row->id'<button class='btn'><i class='fa fa-eye'></i></button></a></td>";
                                   
                                   echo "</tr>"; 
                               }

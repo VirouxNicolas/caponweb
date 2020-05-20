@@ -1,6 +1,6 @@
- <section id="main-content">
+<section id="main-content">
       <section class="wrapper">
-        <h3><i class="fa fa-angle-right"></i>ARTICLE EN ATTENTE</h3>
+        <h3><i class="fa fa-angle-right"></i>ADMINISTRATION ARTICLES</h3>
         <div class="row mb">
           <!-- page start-->
           <div class="content-panel">
@@ -13,17 +13,18 @@
                     <th>Mail auteur</th>
                     <th>Sujet</th>
                     <th>Description</th>
-                    <!--<th>Image</th>-->
-                    <th>Confirmer</th>
+                    <th>Etat</th>
+                    <th>Cacher</th>
+                    <th>Publier</th>
                     <!--<th>Date</th>-->
-                    <th>Activité</th>
+                    <th>Supprimer</th>
                     
                   </tr>
                 </thead>
                 <tbody>
                   <tr class="gradeX">
                     <?php
-                          $client = curl_init('http://localhost/Caponweb1/api/apiHandler.php?action=outputWaitingNews');
+                          $client = curl_init('http://localhost/Caponweb1/api/apiHandler.php?action=outputAllNews');
                           curl_setopt($client, CURLOPT_RETURNTRANSFER, 1);
                           $response = curl_exec($client);
                           $result = json_decode($response);
@@ -37,12 +38,10 @@
                                   echo "<td>$row->mail</td>";
                                   echo "<td>$row->subject</td>";
                                   echo "<td>$row->descriptionArticles</td>";
-                                  //echo "<td>$row->pictures</td>";
-                                  echo "<td><a href='http://localhost/Caponweb1/api/apiHandler.php?action=updateVisibleArticle&idNews=$row->idNews'<button class='btn'><i class='fa fa-check'></i></button></a></td>";
+                                  echo "<td>$row->confirmation</td>";
+                                  echo "<td><a href='http://localhost/Caponweb1/api/apiHandler.php?action=updateCacheArticle&idNews=$row->idNews'<button class='btn'><i class='fa fa-eye-slash'></i></button></a></td>";
+                                  echo "<td><a href='http://localhost/Caponweb1/api/apiHandler.php?action=updateVisibleArticle&idNews=$row->idNews'<button class='btn'><i class='fa fa-eye'></i></button></a></td>";
                                   echo "<td><a href='http://localhost/Caponweb1/api/apiHandler.php?action=deleteArticle&idNews=$row->idNews'<button class='btn'><i class='fa fa-trash'></i></button></a></td>";
-                                  
-                                  
-                                  
                                   echo "</tr>"; 
                               }
                           }else{

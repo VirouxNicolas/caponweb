@@ -47,7 +47,14 @@
             case 'attentelist':
               include 'dash_waiting_article.php';
             break;
+            case 'tousarticles':
+              include 'dash_articles.php';
+            break;
+            case 'tousutilisateur':
+              include 'dash_utilisateurs.php';
+            break;
             
+
         }
     }
 

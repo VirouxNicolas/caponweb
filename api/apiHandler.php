@@ -33,7 +33,6 @@ if($_GET["action"] == 'outputAdmin'){
     $data = $apiObject->outputAdmin();
 }
 
-
 //creer un article
 if($_GET["action"] == 'addNew'){
     $data = $apiObject->addNew();
@@ -51,6 +50,37 @@ if($_GET["action"] == 'addInscriptionContest'){
 if($_GET["action"] == 'outputInternationalContest'){
     $data = $apiObject->outputInternationalContest();
 }
+
+if($_GET["action"] == 'updateVisibleArticle'){
+    $id = $_GET["idNews"];
+    $data = $apiObject->updateVisibleArticle($id);
+}
+
+if($_GET["action"] == 'updateCacheArticle'){
+    $id = $_GET["idNews"];
+    $data = $apiObject->updateCacheArticle($id);
+}
+
+if($_GET["action"] == 'deleteArticle'){
+    $id = $_GET["idNews"];
+    $data = $apiObject->deleteArticle($id);
+}
+
+if($_GET["action"] == 'addEntrainement'){
+    $data = $apiObject->addEntrainement();
+}
+
+if($_GET["action"] == 'updateAdminUtilisateur'){
+    $id = $_GET["id"];
+    $data = $apiObject->updateAdminUtilisateur($id);
+}
+
+
+if($_GET["action"] == 'updateMembreUtilisateur'){
+    $id = $_GET["id"];
+    $data = $apiObject->updateMembreUtilisateur($id);
+}
+
 
 echo json_encode($data);
 ?>

@@ -40,7 +40,12 @@ exit(); }
               <span>News</span>
               </a>
             <ul class="sub">
-              <li><a href="dashboard.php?name=entrainement">Tous les articles</a></li>
+            
+            <?php if ($_SESSION['user_type'] == 'admin'){
+                echo '<li><a href="dashboard.php?name=tousarticles">Tous les articles</a></li>';
+              }
+              else{}
+              ?>
 
               <?php if ($_SESSION['user_type'] == 'admin'){
                 echo '<li><a href="dashboard.php?name=attentelist">Article en attente</a></li>';
@@ -69,6 +74,25 @@ exit(); }
               <li><a href="dashboard.php?name=entrainement">Créer un entrainement</a></li>
             </ul>
           </li>
+
+          <li class="sub-menu">
+            <a href="javascript:;">
+              <i class="fa fa-desktop"></i>
+              <span>Utilisateur</span>
+              </a>
+            <ul class="sub">
+            
+            <?php if ($_SESSION['user_type'] == 'admin'){
+                echo '<li><a href="dashboard.php?name=tousutilisateur">Tous les utilisateurs</a></li>';
+              }
+              else{}
+              ?>
+
+              
+              
+            </ul>
+          </li>
+          
           
           
         </ul>
