@@ -65,6 +65,7 @@
                         success:function(data){
                             //outputData();
                             $('#api_form')[0].reset();
+                            alert('Votre article a été créé');
                         }
                     });
                 }
