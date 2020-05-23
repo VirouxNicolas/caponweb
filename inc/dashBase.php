@@ -26,7 +26,7 @@ exit(); }
       <div id="sidebar" class="nav-collapse ">
         <!-- sidebar menu start-->
         <ul class="sidebar-menu" id="nav-accordion">
-          <p class="centered"><a href="dashboard.php?name=entrainement"><img src="../css/dashboard/img/max.jpg" class="img-circle" width="80"></a></p>
+          
           <h5 class="centered"><?php echo $_SESSION['username']; ?></h5>
           <li class="mt">
             <a class="" href="dashboard.php?name=profile">
