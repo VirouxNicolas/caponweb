@@ -199,7 +199,7 @@ class API{
                 ':heure_debut' => $_POST["heure_debut"],
                 ':heure_fin' => $_POST["heure_fin"]
             );
-            $insert = $this->connect->prepare("INSERT INTO entrainement (lieu, date_entrainement, heure_debut, heure_fin, idUsers) VALUES ('Bierges','2020-09-05', '13:30','14:30',1)");
+            $insert = $this->connect->prepare("INSERT INTO entrainement (lieu, date_entrainement, heure_debut, heure_fin, idUsers) VALUES (:lieu, :date_entrainement, :heure_debut, :heure_fin ,1)");
             $insert->execute($data);
         }
     }

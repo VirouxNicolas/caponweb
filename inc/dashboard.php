@@ -27,6 +27,7 @@
 </head>
 
 <body>
+<?php include '../controller/creation_entrainement.php';?>
 <?php include 'dashNav.php';?>
 <?php
         if(empty($_GET)) {
