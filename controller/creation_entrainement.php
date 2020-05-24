@@ -5,10 +5,11 @@ if(isset($_POST["action"])){
             'lieu' => $_POST["lieu"],
             'date_entrainement' => $_POST["date_entrainement"],
             'heure_debut'      => $_POST["heure_debut"],
-            'heure_fin'      => $_POST["heure_fin"]
+            'heure_fin'      => $_POST["heure_fin"],
+            'idUsers'      => $_POST["idUsers"]
         );
 
-       $client = curl_init('http://51.75.126.61/api/apiHandler.php?action=addEntrainement');
+        $client = curl_init('http://51.75.126.61/api/apiHandler.php?action=addEntrainement');
         curl_setopt($client, CURLOPT_POST, true);
         curl_setopt($client, CURLOPT_POSTFIELDS, $data);
         curl_setopt($client, CURLOPT_RETURNTRANSFER, true);
