@@ -327,7 +327,7 @@
                             //outputData();
           
                             $('#contactForm')[0].reset();
-                            alert('Votre article à été créé');
+                            alert('Votre inscription à été créée');
                          
                         }
                     });
