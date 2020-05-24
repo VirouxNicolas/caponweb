@@ -5,7 +5,8 @@ if(isset($_POST["action"])){
             'lieu' => $_POST["lieu"],
             'date_entrainement' => $_POST["date_entrainement"],
             'heure_debut'      => $_POST["heure_debut"],
-            'heure_fin'      => $_POST["heure_fin"]
+            'heure_fin'      => $_POST["heure_fin"],
+            'idUsers'      => $_POST["idUsers"]
         );
 
         $client = curl_init('http://localhost/Caponweb1/api/apiHandler.php?action=addEntrainement');

@@ -4,9 +4,7 @@
     } 
     else{
         switch($_GET['name']){
-            case 'entrainement': 
-                include 'dashBase.php';
-              break;
+            
             case 'profile': 
                 include 'dashBase.php';
             break;
@@ -23,7 +21,15 @@
             case 'tousutilisateur': 
                 include 'dashBase.php';
             break;
-
+            case 'entrainement': 
+                include 'dashBase.php';
+              break;
+            case 'listentrainement': 
+                include 'dashBase.php';
+            break;
+            case 'dashentrainement': 
+                include 'dashBase.php';
+            break;
             
         }
     }

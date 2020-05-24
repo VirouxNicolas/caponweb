@@ -197,9 +197,11 @@ class API{
                 ':lieu' => $_POST["lieu"],
                 ':date_entrainement' => $_POST["date_entrainement"],
                 ':heure_debut' => $_POST["heure_debut"],
-                ':heure_fin' => $_POST["heure_fin"]
+                ':heure_fin' => $_POST["heure_fin"],
+                ':idUsers' => $_POST["idUsers"],
+                
             );
-            $insert = $this->connect->prepare("INSERT INTO entrainement (lieu, date_entrainement, heure_debut, heure_fin, idUsers) VALUES (:lieu, :date_entrainement, :heure_debut, :heure_fin ,1)");
+            $insert = $this->connect->prepare("INSERT INTO entrainement (lieu, date_entrainement, heure_debut, heure_fin, idUsers) VALUES (:lieu, :date_entrainement, :heure_debut, :heure_fin , :idUsers)");
             $insert->execute($data);
         }
     }
@@ -222,6 +224,27 @@ class API{
         $data[] = "Membre";
         return $data;
     }
+
+    function outputEntrainement(){
+        $select = $this->connect->prepare("SELECT * FROM entrainement JOIN users ON entrainement.idUsers = users.id ORDER BY date_entrainement");
+        if($select->execute()){
+            while($row = $select->fetch(PDO::FETCH_ASSOC)){
+                $data[] = $row;
+            }
+            return $data;
+        }
+    }
+
+    function deleteEntrainement($id){
+        $select = $this->connect->prepare("DELETE FROM entrainement WHERE idEntrainement=$id");
+        $select->execute();
+        
+        $data[] = "Supprime";
+    
+        return $data;
+    }
+
+
 
 
 

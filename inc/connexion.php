@@ -3,6 +3,7 @@
                     session_start();
                     $_SESSION = [];
                     if (isset($_POST['username'])){
+                     
                         $username = stripslashes($_POST['username']); // récupérer l'email et supprimer les antislashes ajoutés par le formulaire
                         $username = mysqli_real_escape_string($con,$username); //escapes special characters in a string
                         $password = stripslashes($_POST['password']);
@@ -15,10 +16,13 @@
                         $logged_in_user = mysqli_fetch_assoc($result);
                         print_r($logged_in_user);
                         
+                        $id = $logged_in_user['id'];
+                        print_r($id);
                         $usertype = $logged_in_user['user_type'];
                         print_r($usertype);
 
                             if($logged_in_user){
+                              $_SESSION['id'] = $id;
                               $_SESSION['username'] = $username;
                               $_SESSION['user_type'] = $usertype;
                               header('Location: ./inc/dashboard.php?name=profile');

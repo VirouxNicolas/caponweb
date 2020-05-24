@@ -51,6 +51,10 @@ if($_GET["action"] == 'outputInternationalContest'){
     $data = $apiObject->outputInternationalContest();
 }
 
+if($_GET["action"] == 'outputEntrainement'){
+    $data = $apiObject->outputEntrainement();
+}
+
 if($_GET["action"] == 'updateVisibleArticle'){
     $id = $_GET["idNews"];
     $data = $apiObject->updateVisibleArticle($id);
@@ -81,6 +85,10 @@ if($_GET["action"] == 'updateMembreUtilisateur'){
     $data = $apiObject->updateMembreUtilisateur($id);
 }
 
+if($_GET["action"] == 'deleteEntrainement'){
+    $id = $_GET["idEntrainement"];
+    $data = $apiObject->deleteEntrainement($id);
+}
 
 echo json_encode($data);
 ?>
