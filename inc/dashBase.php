@@ -26,7 +26,7 @@ exit(); }
       <div id="sidebar" class="nav-collapse ">
         <!-- sidebar menu start-->
         <ul class="sidebar-menu" id="nav-accordion">
-          <p class="centered"><a href="dashboard.php?name=entrainement"><img src="../css/dashboard/img/max.jpg" class="img-circle" width="80"></a></p>
+          
           <h5 class="centered"><?php echo $_SESSION['username']; ?></h5>
           <li class="mt">
             <a class="" href="dashboard.php?name=profile">
@@ -70,8 +70,13 @@ exit(); }
               <span>Entrainement</span>
               </a>
             <ul class="sub">
-              <li><a href="dashboard.php?name=entrainement">Liste des entrainements</a></li>
-              <li><a href="dashboard.php?name=entrainement">Créer un entrainement</a></li>
+            <li><a href="dashboard.php?name=entrainement">Créer un entrainement</a></li>
+              <li><a href="dashboard.php?name=listentrainement">Liste des entrainements</a></li>
+              <?php if ($_SESSION['user_type'] == 'admin'){
+                echo '<li><a href="dashboard.php?name=dashentrainement">Administrer entrainements</a></li>';
+              }
+              else{}
+              ?>
             </ul>
           </li>
 

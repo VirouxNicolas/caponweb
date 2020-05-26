@@ -19,10 +19,6 @@
               <!-- 
               <ul class="ul-check primary list-unstyled mt-5">
                 <li>Cargo express</li>
-                <li>Secure Services</li>
-                <li>Secure Warehouseing</li>
-                <li>Cost savings</li>
-                <li>Proven by great companies</li>
               </ul>
               -->
 

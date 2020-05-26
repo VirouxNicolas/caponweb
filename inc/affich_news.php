@@ -14,6 +14,8 @@
             echo "<li>$row->name</li>";
             echo "<li>$row->mail</li>";
             echo "</ul>";
+            echo "<hr>";
+            
             
         }
     }else{

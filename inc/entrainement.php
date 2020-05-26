@@ -33,7 +33,7 @@
               Heure de fin:
                       <input type="time" name="heure_fin" class="form-control" id="heure_fin" placeholder="Heure fin" required>
                   </div>
- 
+                  <input type="hidden" name="idUsers" class="form-control" id="idUsers" value=<?php echo $_SESSION['id']; ?> readonly>
                   <input type="hidden" name="action" id="action" value="addEntrainement" />
                   <input type="submit" id="submitNewTodo" 
                       name="submitNewTodo" class="btn btn-block btn-primary text-white py-3 px-5" value="Créer entrainement" />

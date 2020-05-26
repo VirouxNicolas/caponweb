@@ -27,6 +27,7 @@
 </head>
 
 <body>
+<?php include '../controller/creation_entrainement.php';?>
 <?php include 'dashNav.php';?>
 <?php
         if(empty($_GET)) {
@@ -35,9 +36,7 @@
         }
         else {
           switch($_GET['name']){
-            case 'entrainement':
-                include 'entrainement.php';
-            break;
+            
             case 'profile':
               include 'profile.php';
             break;
@@ -53,6 +52,16 @@
             case 'tousutilisateur':
               include 'dash_utilisateurs.php';
             break;
+            case 'entrainement':
+              include 'entrainement.php';
+          break;
+          case 'listentrainement':
+            include 'dash_entrainement.php';
+          break;
+          case 'dashentrainement':
+            include 'dash_admin_entrainement.php';
+          break;
+          
             
 
         }
