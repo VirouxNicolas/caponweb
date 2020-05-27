@@ -7,7 +7,9 @@ if(isset($_POST["action"])){
             'subject'      => $_POST["subject"],
             'descriptionArticles'      => $_POST["descriptionArticles"]
         );
+
         $client = curl_init('http://localhost/Caponweb1/api/apiHandler.php?action=addNew');
+
         curl_setopt($client, CURLOPT_POST, true);
         curl_setopt($client, CURLOPT_POSTFIELDS, $data);
         curl_setopt($client, CURLOPT_RETURNTRANSFER, true);

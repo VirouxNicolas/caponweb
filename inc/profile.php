@@ -12,9 +12,13 @@
                 <h4>Type d'utilisateur: </h4>
                 <h6><?php echo $_SESSION['user_type']; ?></h6>
 
+
+
               </div>
               
             </div>
             <!-- /row -->
           </div>
+
+
 </section>

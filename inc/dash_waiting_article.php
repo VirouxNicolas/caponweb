@@ -23,7 +23,11 @@
                 <tbody>
                   <tr class="gradeX">
                     <?php
-                          $client = curl_init('http://localhost/Caponweb1/api/apiHandler.php?action=outputWaitingNews');
+
+       
+
+                          $client = curl_init('http://51.75.126.61/api/apiHandler.php?action=outputWaitingNews');
+
                           curl_setopt($client, CURLOPT_RETURNTRANSFER, 1);
                           $response = curl_exec($client);
                           $result = json_decode($response);
@@ -38,8 +42,12 @@
                                   echo "<td>$row->subject</td>";
                                   echo "<td>$row->descriptionArticles</td>";
                                   //echo "<td>$row->pictures</td>";
-                                  echo "<td><a href='http://localhost/Caponweb1/api/apiHandler.php?action=updateVisibleArticle&idNews=$row->idNews'<button class='btn'><i class='fa fa-check'></i></button></a></td>";
-                                  echo "<td><a href='http://localhost/Caponweb1/api/apiHandler.php?action=deleteArticle&idNews=$row->idNews'<button class='btn'><i class='fa fa-trash'></i></button></a></td>";
+
+                              
+
+                                  echo "<td><a href='http://51.75.126.61/api/apiHandler.php?action=updateVisibleArticle&idNews=$row->idNews'<button class='btn'><i class='fa fa-check'></i></button></a></td>";
+                                  echo "<td><a href='http://51.75.126.61/api/apiHandler.php?action=deleteArticle&idNews=$row->idNews'<button class='btn'><i class='fa fa-trash'></i></button></a></td>";
+
                                   
                                   
                                   

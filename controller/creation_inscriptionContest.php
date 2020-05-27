@@ -12,7 +12,9 @@ if(isset($_POST["action"])){
             'reservation' => $_POST["reservation"],
             'message' => $_POST["message"]
         );
+
         $client = curl_init('http://localhost/Caponweb1/api/apiHandler.php?action=addInscriptionContest');
+
         curl_setopt($client, CURLOPT_POST, true);
         curl_setopt($client, CURLOPT_POSTFIELDS, $data);
         curl_setopt($client, CURLOPT_RETURNTRANSFER, true);

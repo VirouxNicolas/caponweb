@@ -18,7 +18,10 @@
                 <tbody>
                   <tr class="gradeX">
                     <?php
-                          $client = curl_init('http://localhost/Caponweb1/api/apiHandler.php?action=outputEntrainement');
+
+
+                          $client = curl_init('http://51.75.126.61/api/apiHandler.php?action=outputEntrainement');
+
                           curl_setopt($client, CURLOPT_RETURNTRANSFER, 1);
                           $response = curl_exec($client);
                           $result = json_decode($response);

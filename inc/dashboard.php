@@ -61,8 +61,13 @@
           case 'dashentrainement':
             include 'dash_admin_entrainement.php';
           break;
+
           
-            
+        
+          case 'deconnexion':
+            include 'deconnexion.php';
+          break;
+        
 
         }
     }

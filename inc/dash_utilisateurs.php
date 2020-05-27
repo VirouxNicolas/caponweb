@@ -22,7 +22,11 @@
                 <tbody>
                   <tr class="gradeX">
                     <?php
-                          $client = curl_init('http://localhost/Caponweb1/api/apiHandler.php?action=outputUsers');
+
+          
+
+                          $client = curl_init('http://51.75.126.61/api/apiHandler.php?action=outputUsers');
+
                           curl_setopt($client, CURLOPT_RETURNTRANSFER, 1);
                           $response = curl_exec($client);
                           $result = json_decode($response);
@@ -37,9 +41,13 @@
                                   echo "<td>$row->trn_date</td>";
                                   echo "<td>$row->user_type</td>";
                                 
-                                  echo "<td><a href='http://localhost/Caponweb1/api/apiHandler.php?action=updateAdminUtilisateur&id=$row->id'<button class='btn'><i class='fa fa-eye-slash'></i></button></a></td>";
+
+                                 
+
+                                  echo "<td><a href='http://51.75.126.61/api/apiHandler.php?action=updateAdminUtilisateur&id=$row->id'<button class='btn'><i class='fa fa-eye-slash'></i></button></a></td>";
                                   
-                                  echo "<td><a href='http://localhost/Caponweb1/api/apiHandler.php?action=updateMembreUtilisateur&id=$row->id'<button class='btn'><i class='fa fa-eye'></i></button></a></td>";
+                                  echo "<td><a href='http://51.75.126.61/api/apiHandler.php?action=updateMembreUtilisateur&id=$row->id'<button class='btn'><i class='fa fa-eye'></i></button></a></td>";
+
                                   
                                   echo "</tr>"; 
                               }
@@ -83,4 +91,9 @@
             });
 
         });
+
     </script> -->
+
+    </script> 
+
+

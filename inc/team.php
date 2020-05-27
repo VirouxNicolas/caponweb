@@ -16,11 +16,18 @@
               <p>Si pour gagner une course la vitesse est très importante, la rapidité des ravitaillements ne l'est pas moins.</p>
               <p></p>
 
-              <!-- 
+              
               <ul class="ul-check primary list-unstyled mt-5">
                 <li>Cargo express</li>
+
+
+                <li>Secure Services</li>
+                <li>Secure Warehouseing</li>
+                <li>Cost savings</li>
+                <li>Proven by great companies</li>
+
               </ul>
-              -->
+            
 
             </div>
 

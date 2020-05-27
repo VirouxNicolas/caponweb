@@ -1,3 +1,4 @@
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <div class="site-section bg-light block-13" id="international-contest" data-aos="fade">
         <div class="container">
 
@@ -296,6 +297,8 @@
                   <textarea name="message" id="message" name="message" class="form-control" placeholder="Ecrivez votre message ici"  rows="5"></textarea>
                 </div>
               </div>
+              <div class="g-recaptcha" data-sitekey="6LeWNfUUAAAAAPSaJ_4myhHnA_k1G2HGX_Ap2XV-" ></div>
+               <br>
               <div class="form-group row">
                 <div class="col-md-12 mr-auto">
                 <input type="hidden" name="action" id="action" value="addInscriptionContest" />
@@ -307,7 +310,11 @@
             </form>
           </div>
 
-          <!-- <script>
+
+           <script>
+
+          <script>
+
         $(document).ready(function(){
 
             $('#contactForm').on('submit', function(event){
@@ -322,11 +329,21 @@
                         data: formData,
                         success:function(data){
                             //outputData();
+
                             $('#contactForm')[0].reset();
+
+          
+                            $('#contactForm')[0].reset();
+                            alert('Votre inscription à été créée');
+                         
+
                         }
                     });
                 }
             });
 
         });
-    </script> -->
+
+    </script> 
+
+    </script> 

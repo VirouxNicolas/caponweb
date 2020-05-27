@@ -30,12 +30,13 @@ $to = "contact.caponweb@gmail.com";
 
     $send = mail($to, $subject, $body, $headers);
 
- 
-    // redirect to success page
+
     if ($send){
-    echo "success";
+        echo "Votre message est envoyé";
+        header ('Location: https://test.caponweb.be/index.php?name=contact');
+      
     }else{
-        echo "invalid";
+        echo "Erreur d'envoi du mail ";
     }
  
 ?>

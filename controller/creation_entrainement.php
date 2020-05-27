@@ -10,6 +10,7 @@ if(isset($_POST["action"])){
         );
 
         $client = curl_init('http://localhost/Caponweb1/api/apiHandler.php?action=addEntrainement');
+
         curl_setopt($client, CURLOPT_POST, true);
         curl_setopt($client, CURLOPT_POSTFIELDS, $data);
         curl_setopt($client, CURLOPT_RETURNTRANSFER, true);

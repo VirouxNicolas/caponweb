@@ -1,6 +1,7 @@
 <?php
-	$server = "localhost";
-	$username = "root";
+	$server = "srv";
+
+	$username = "";
 	$password = "";
 	$db = "caponweb";
 	$con = mysqli_connect($server, $username, $password, $db);

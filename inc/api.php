@@ -17,16 +17,14 @@ class API{
      * connection à la db
      */
     function dbConnection(){
-
-        $this->connect = new PDO("mysql:host=localhost;dbname=caponweb", "root", "");
-
+        $this->connect = new PDO("mysql:host=51.75.126.61;dbname=caponweb", "", "");
     }
 
     /**
      * @return mixed
      */
     function outputAllNews(){
-        $select = $this->connect->prepare("SELECT * FROM newsarticles ORDER BY idNews");
+        $select = $this->connect->prepare("SELECT * FROM newsArticles ORDER BY idNews");
         if($select->execute()){
             while($row = $select->fetch(PDO::FETCH_ASSOC)){
                 $data[] = $row;
@@ -42,7 +40,7 @@ class API{
      * @return mixed
      */
     function outputValidNews(){
-        $select = $this->connect->prepare("SELECT * FROM newsarticles WHERE confirmation = 1");
+        $select = $this->connect->prepare("SELECT * FROM newsArticles WHERE confirmation = 1");
         if($select->execute()){
             while($row = $select->fetch(PDO::FETCH_ASSOC)){
                 $data[] = $row;
@@ -57,7 +55,7 @@ class API{
      * @return mixed
      */
     function outputWaitingNews(){
-        $select = $this->connect->prepare("SELECT * FROM newsarticles WHERE confirmation = 0");
+        $select = $this->connect->prepare("SELECT * FROM newsArticles WHERE confirmation = 0");
         if($select->execute()){
             while($row = $select->fetch(PDO::FETCH_ASSOC)){
                 $data[] = $row;
@@ -199,11 +197,9 @@ class API{
                 ':lieu' => $_POST["lieu"],
                 ':date_entrainement' => $_POST["date_entrainement"],
                 ':heure_debut' => $_POST["heure_debut"],
-                ':heure_fin' => $_POST["heure_fin"],
-                ':idUsers' => $_POST["idUsers"],
-                
+                ':heure_fin' => $_POST["heure_fin"]
             );
-            $insert = $this->connect->prepare("INSERT INTO entrainement (lieu, date_entrainement, heure_debut, heure_fin, idUsers) VALUES (:lieu, :date_entrainement, :heure_debut, :heure_fin , :idUsers)");
+            $insert = $this->connect->prepare("INSERT INTO entrainement (lieu, date_entrainement, heure_debut, heure_fin, idUsers) VALUES ('Bierges','2020-09-05', '13:30','14:30',1)");
             $insert->execute($data);
         }
     }
@@ -226,27 +222,6 @@ class API{
         $data[] = "Membre";
         return $data;
     }
-
-    function outputEntrainement(){
-        $select = $this->connect->prepare("SELECT * FROM entrainement JOIN users ON entrainement.idUsers = users.id ORDER BY date_entrainement");
-        if($select->execute()){
-            while($row = $select->fetch(PDO::FETCH_ASSOC)){
-                $data[] = $row;
-            }
-            return $data;
-        }
-    }
-
-    function deleteEntrainement($id){
-        $select = $this->connect->prepare("DELETE FROM entrainement WHERE idEntrainement=$id");
-        $select->execute();
-        
-        $data[] = "Supprime";
-    
-        return $data;
-    }
-
-
 
 
 

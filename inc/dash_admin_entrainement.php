@@ -18,7 +18,10 @@
                 <tbody>
                   <tr class="gradeX">
                     <?php
-                          $client = curl_init('http://localhost/Caponweb1/api/apiHandler.php?action=outputEntrainement');
+
+
+                          $client = curl_init('http://51.75.126.61/api/apiHandler.php?action=outputEntrainement');
+
                           curl_setopt($client, CURLOPT_RETURNTRANSFER, 1);
                           $response = curl_exec($client);
                           $result = json_decode($response);
@@ -31,7 +34,10 @@
                                   echo "<td>$row->date_entrainement</td>";
                                   echo "<td>$row->heure_debut</td>";
                                   echo "<td>$row->heure_fin</td>";
-                                  echo "<td><a href='http://localhost/Caponweb1/api/apiHandler.php?action=deleteEntrainement&idEntrainement=$row->idEntrainement'<button class='btn'><i class='fa fa-trash'></i></button></a></td>";
+
+        
+                                  echo "<td><a href='http://51.75.126.61/api/apiHandler.php?action=deleteEntrainement&idEntrainement=$row->idEntrainement'<button class='btn'><i class='fa fa-trash'></i></button></a></td>";
+
                                   echo "</tr>";  
                               }
                           }else{
